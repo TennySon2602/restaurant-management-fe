@@ -1,0 +1,174 @@
+<div class="customer-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1>🍜 Vietnamese Restaurant</h1>
+      <button (click)="logout()" class="btn-secondary">Logout</button>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="booking-section fade-in">
+      <h2>Make a Reservation</h2>
+      <p class="subtitle">Book your table for an authentic Vietnamese dining experience</p>
+
+      <!-- Guest Count -->
+      <div class="guest-counter card">
+        <label>Number of Guests</label>
+        <div class="counter-controls">
+          <button (click)="guestCount = guestCount > 1 ? guestCount - 1 : 1" class="counter-btn">-</button>
+          <span class="counter-value">{{ guestCount }}</span>
+          <button (click)="guestCount = guestCount + 1" class="counter-btn">+</button>
+        </div>
+        <p class="suggestion" *ngIf="guestCount >= 1">{{ getSuggestedTables() }}</p>
+        <p class="warning" *ngIf="needsMultipleTables()">
+          ⚠️ Large group detected - Multiple tables required
+        </p>
+      </div>
+
+      <!-- Table Selection -->
+      <div class="table-selection card">
+        <h3>Select Tables</h3>
+        <p class="info">
+          Selected: {{ selectedTableIds.length }} table(s) | 
+          Capacity: {{ getTotalCapacity() }} guests
+        </p>
+
+        <!-- 2-seat tables -->
+        <div class="table-group" *ngIf="getTablesByCapacity(2).length > 0">
+          <h4>2-Seat Tables</h4>
+          <div class="table-grid">
+            <button
+              *ngFor="let table of getTablesByCapacity(2)"
+              [class.selected]="isTableSelected(table.id)"
+              (click)="toggleTableSelection(table.id)"
+              class="table-button">
+              <span class="table-number">{{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} seats</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-seat tables -->
+        <div class="table-group" *ngIf="getTablesByCapacity(4).length > 0">
+          <h4>4-Seat Tables</h4>
+          <div class="table-grid">
+            <button
+              *ngFor="let table of getTablesByCapacity(4)"
+              [class.selected]="isTableSelected(table.id)"
+              (click)="toggleTableSelection(table.id)"
+              class="table-button">
+              <span class="table-number">{{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} seats</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6-seat tables -->
+        <div class="table-group" *ngIf="getTablesByCapacity(6).length > 0">
+          <h4>6-Seat Tables</h4>
+          <div class="table-grid">
+            <button
+              *ngFor="let table of getTablesByCapacity(6)"
+              [class.selected]="isTableSelected(table.id)"
+              (click)="toggleTableSelection(table.id)"
+              class="table-button">
+              <span class="table-number">{{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} seats</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form (ngSubmit)="submitReservation()" class="booking-form card">
+        <h3>Your Details</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              id="name"
+              type="text"
+              [(ngModel)]="customerName"
+              name="name"
+              placeholder="Enter your name"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+              id="phone"
+              type="tel"
+              [(ngModel)]="customerPhone"
+              name="phone"
+              placeholder="0901234567"
+              class="form-input"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date *</label>
+            <input
+              id="date"
+              type="date"
+              [(ngModel)]="date"
+              name="date"
+              [min]="date"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Time *</label>
+            <input
+              id="time"
+              type="time"
+              [(ngModel)]="time"
+              name="time"
+              class="form-input"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Special Requests (Optional)</label>
+          <textarea
+            id="notes"
+            [(ngModel)]="notes"
+            name="notes"
+            placeholder="Any dietary restrictions or special occasions?"
+            class="form-input"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+
+        <button type="submit" class="btn-primary submit-button">
+          Confirm Reservation
+        </button>
+      </form>
+
+      <!-- Success Message -->
+      <div *ngIf="showSuccess" class="success-overlay">
+        <div class="success-message fade-in">
+          <div class="success-icon">✓</div>
+          <h3>Reservation Confirmed!</h3>
+          <p>Thank you for booking with us</p>
+          <p>We'll see you on {{ date }} at {{ time }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
