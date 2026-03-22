@@ -4,6 +4,9 @@
     <div class="header-content">
       <h1>⚡ Staff POS System</h1>
       <div class="header-actions">
+        <button (click)="viewReservations()" class="btn-primary">
+          📅 Đặt Bàn
+        </button>
         <button (click)="mergeTables()" class="btn-secondary">
           Merge Tables
         </button>
@@ -32,7 +35,7 @@
     </div>
 
     <!-- Center: Menu -->
-    <div class="menu-panel" *ngIf="selectedTable">
+    <div class="menu-panel" *ngIf="selectedTable && !showTableDetail">
       <div class="menu-header">
         <h2>Menu</h2>
         <input
@@ -71,8 +74,62 @@
       </div>
     </div>
 
+    <!-- Table Detail View -->
+    <div class="table-detail-panel" *ngIf="selectedTable && showTableDetail">
+      <div class="detail-header">
+        <h2>Bàn {{ selectedTable.number }}</h2>
+        <button (click)="showTableDetail = false" class="back-btn">← Quay lại menu</button>
+      </div>
+
+      <div class="order-summary-detail">
+        <h3>Order hiện tại</h3>
+        <div class="order-items-list">
+          <div *ngIf="currentOrder.length === 0" class="empty-order">
+            Chưa có món nào
+          </div>
+          
+          <div *ngFor="let item of currentOrder" class="order-item-detail">
+            <div class="item-name">{{ item.menuItem.name }}</div>
+            <div class="item-controls">
+              <button (click)="updateQuantity(item, -1)" class="qty-btn">-</button>
+              <span class="qty">{{ item.quantity }}</span>
+              <button (click)="updateQuantity(item, 1)" class="qty-btn">+</button>
+            </div>
+            <div class="item-total">{{ formatPrice(item.menuItem.price * item.quantity) }}</div>
+          </div>
+        </div>
+
+        <div class="detail-totals">
+          <div class="total-row">
+            <span>Tạm tính:</span>
+            <span>{{ formatPrice(getOrderTotal()) }}</span>
+          </div>
+          <div class="total-row">
+            <span>VAT (10%):</span>
+            <span>{{ formatPrice(getOrderTotal() * 0.1) }}</span>
+          </div>
+          <div class="total-row final">
+            <span>Tổng cộng:</span>
+            <span>{{ formatPrice(getOrderTotal() * 1.1) }}</span>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button (click)="showTableDetail = false" class="btn-secondary">
+            Thêm món
+          </button>
+          <button (click)="submitOrder()" [disabled]="currentOrder.length === 0" class="btn-secondary">
+            Gửi bếp
+          </button>
+          <button (click)="proceedToCheckout()" [disabled]="currentOrder.length === 0" class="btn-primary">
+            Thanh toán
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Right: Current Order -->
-    <div class="order-panel" *ngIf="selectedTable">
+    <div class="order-panel" *ngIf="selectedTable && !showTableDetail">
       <h2>Table {{ selectedTable.number }}</h2>
       
       <div class="order-items">
@@ -107,10 +164,10 @@
         </div>
         
         <button
-          (click)="submitOrder()"
+          (click)="showTableDetail = true"
           [disabled]="currentOrder.length === 0"
           class="btn-primary submit-order">
-          Submit Order
+          Xem chi tiết →
         </button>
       </div>
     </div>

@@ -1,0 +1,159 @@
+<div class="reservations-container">
+  <header class="page-header">
+    <h1>📅 Quản Lý Đặt Bàn</h1>
+    <p>Xem và xử lý các đơn đặt bàn</p>
+  </header>
+
+  <!-- Today's Reservations -->
+  <section class="reservations-section">
+    <h2>🕐 Đặt Bàn Hôm Nay</h2>
+    
+    <div *ngIf="todayReservations.length === 0" class="empty-state">
+      <p>Không có đặt bàn nào hôm nay</p>
+    </div>
+
+    <div class="reservations-grid">
+      <div *ngFor="let reservation of todayReservations" 
+           class="reservation-card card"
+           [class.reservation-soon]="isReservationSoon(reservation)">
+        
+        <!-- Header -->
+        <div class="reservation-header">
+          <div class="reservation-time">
+            <span class="time-badge">{{ reservation.time }}</span>
+            <span *ngIf="isReservationSoon(reservation)" class="soon-badge">SẮP ĐẾN</span>
+          </div>
+          <span class="status-badge" [ngClass]="getStatusBadgeClass(reservation.status)">
+            {{ getStatusText(reservation.status) }}
+          </span>
+        </div>
+
+        <!-- Customer Info -->
+        <div class="customer-info">
+          <h3>{{ reservation.customerName }}</h3>
+          <p class="phone">📞 {{ reservation.customerPhone }}</p>
+        </div>
+
+        <!-- Guest Details -->
+        <div class="guest-details">
+          <div class="guest-breakdown">
+            <div class="detail-item">
+              <span class="guest-icon">👤</span>
+              <div class="guest-info">
+                <span class="label">Người lớn</span>
+                <span class="value">{{ reservation.guestCount }}</span>
+              </div>
+            </div>
+            <div class="detail-item" *ngIf="reservation.childrenCount && reservation.childrenCount > 0">
+              <span class="guest-icon">👶</span>
+              <div class="guest-info">
+                <span class="label">Trẻ nhỏ (không ghế)</span>
+                <span class="value">{{ reservation.childrenCount }}</span>
+              </div>
+            </div>
+            <div class="detail-item" *ngIf="reservation.childrenWithSeatCount && reservation.childrenWithSeatCount > 0">
+              <span class="guest-icon">🧒</span>
+              <div class="guest-info">
+                <span class="label">Trẻ em (cần ghế)</span>
+                <span class="value">{{ reservation.childrenWithSeatCount }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="totals-section">
+            <div class="total-item">
+              <span class="total-label">Tổng số người:</span>
+              <span class="total-value">{{ getTotalGuests(reservation) }}</span>
+            </div>
+            <div class="total-item seats">
+              <span class="total-label">💺 Số ghế cần:</span>
+              <span class="total-value seats-value">{{ getTotalSeatsNeeded(reservation) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Info -->
+        <div class="table-info">
+          <span class="label">Bàn:</span>
+          <span class="tables">{{ formatTableNumbers(reservation.tableIds) }}</span>
+        </div>
+
+        <!-- Pre-order Info -->
+        <div *ngIf="reservation.hasPreOrder" class="pre-order-badge">
+          ✓ Đã đặt món trước
+        </div>
+
+        <!-- Notes -->
+        <div *ngIf="reservation.notes" class="notes">
+          <strong>Ghi chú:</strong> {{ reservation.notes }}
+        </div>
+
+        <!-- Arrival Time -->
+        <div *ngIf="reservation.arrivalTime" class="arrival-time">
+          Khách đến lúc: {{ reservation.arrivalTime }}
+        </div>
+
+        <!-- Actions -->
+        <div class="reservation-actions">
+          <button *ngIf="reservation.status === 'pending'"
+                  (click)="confirmReservation(reservation)"
+                  class="btn-primary btn-sm">
+            Xác nhận
+          </button>
+          
+          <button *ngIf="reservation.status === 'confirmed'"
+                  (click)="seatCustomers(reservation)"
+                  class="btn-primary btn-sm">
+            Khách đã đến
+          </button>
+
+          <button *ngIf="reservation.status !== 'cancelled' && reservation.status !== 'completed'"
+                  (click)="cancelReservation(reservation)"
+                  class="btn-secondary btn-sm">
+            Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Reservations -->
+  <section class="reservations-section">
+    <h2>📆 Đặt Bàn Sắp Tới</h2>
+    
+    <div *ngIf="upcomingReservations.length === 0" class="empty-state">
+      <p>Không có đặt bàn nào trong tương lai</p>
+    </div>
+
+    <div class="upcoming-list">
+      <div *ngFor="let reservation of upcomingReservations" 
+           class="upcoming-item card">
+        
+        <div class="upcoming-date">
+          <div class="date-badge">{{ reservation.date }}</div>
+          <div class="time-badge">{{ reservation.time }}</div>
+        </div>
+
+        <div class="upcoming-info">
+          <h4>{{ reservation.customerName }}</h4>
+          <p>{{ getTotalGuests(reservation) }} người • Bàn {{ formatTableNumbers(reservation.tableIds) }}</p>
+          <span class="status-badge" [ngClass]="getStatusBadgeClass(reservation.status)">
+            {{ getStatusText(reservation.status) }}
+          </span>
+        </div>
+
+        <div class="upcoming-actions">
+          <button *ngIf="reservation.status === 'pending'"
+                  (click)="confirmReservation(reservation)"
+                  class="btn-sm btn-primary">
+            Xác nhận
+          </button>
+          <button (click)="cancelReservation(reservation)"
+                  class="btn-sm btn-secondary">
+            Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

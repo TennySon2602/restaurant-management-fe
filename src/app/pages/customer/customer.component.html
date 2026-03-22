@@ -14,25 +14,109 @@
 
       <!-- Guest Count -->
       <div class="guest-counter card">
-        <label>Number of Guests</label>
-        <div class="counter-controls">
-          <button (click)="guestCount = guestCount > 1 ? guestCount - 1 : 1" class="counter-btn">-</button>
-          <span class="counter-value">{{ guestCount }}</span>
-          <button (click)="guestCount = guestCount + 1" class="counter-btn">+</button>
+        <label>Số Lượng Khách</label>
+        
+        <div class="guest-section">
+          <div class="guest-type">
+            <div class="guest-label-group">
+              <span class="guest-label">👤 Người lớn</span>
+              <span class="guest-description">Cần ghế riêng</span>
+            </div>
+            <div class="counter-controls">
+              <button (click)="guestCount = guestCount > 1 ? guestCount - 1 : 1" class="counter-btn">-</button>
+              <span class="counter-value">{{ guestCount }}</span>
+              <button (click)="guestCount = guestCount + 1" class="counter-btn">+</button>
+            </div>
+          </div>
+
+          <div class="guest-type">
+            <div class="guest-label-group">
+              <span class="guest-label">👶 Trẻ em nhỏ</span>
+              <span class="guest-description">Dưới 5 tuổi - Ngồi cùng bố mẹ</span>
+            </div>
+            <div class="counter-controls">
+              <button (click)="childrenCount = childrenCount > 0 ? childrenCount - 1 : 0" class="counter-btn">-</button>
+              <span class="counter-value">{{ childrenCount }}</span>
+              <button (click)="childrenCount = childrenCount + 1" class="counter-btn">+</button>
+            </div>
+          </div>
+
+          <div class="guest-type">
+            <div class="guest-label-group">
+              <span class="guest-label">🧒 Trẻ em lớn</span>
+              <span class="guest-description">Từ 5-12 tuổi - Cần ghế riêng</span>
+            </div>
+            <div class="counter-controls">
+              <button (click)="childrenWithSeatCount = childrenWithSeatCount > 0 ? childrenWithSeatCount - 1 : 0" class="counter-btn">-</button>
+              <span class="counter-value">{{ childrenWithSeatCount }}</span>
+              <button (click)="childrenWithSeatCount = childrenWithSeatCount + 1" class="counter-btn">+</button>
+            </div>
+          </div>
+
+          <div class="total-guests">
+            <div class="total-row">
+              <span class="total-label">Tổng số người:</span>
+              <span class="total-value">{{ getTotalGuests() }} người</span>
+            </div>
+            <div class="seats-row">
+              <span class="seats-label">💺 Số ghế cần:</span>
+              <span class="seats-value">{{ getTotalSeatsNeeded() }} ghế</span>
+            </div>
+          </div>
         </div>
-        <p class="suggestion" *ngIf="guestCount >= 1">{{ getSuggestedTables() }}</p>
-        <p class="warning" *ngIf="needsMultipleTables()">
-          ⚠️ Large group detected - Multiple tables required
+
+        <div class="capacity-info">
+          <div class="info-item">
+            <span class="info-icon">👤</span>
+            <div class="info-text">
+              <strong>{{ guestCount }}</strong> người lớn
+            </div>
+          </div>
+          <div class="info-item" *ngIf="childrenCount > 0">
+            <span class="info-icon">👶</span>
+            <div class="info-text">
+              <strong>{{ childrenCount }}</strong> trẻ nhỏ <span class="note">(không cần ghế)</span>
+            </div>
+          </div>
+          <div class="info-item" *ngIf="childrenWithSeatCount > 0">
+            <span class="info-icon">🧒</span>
+            <div class="info-text">
+              <strong>{{ childrenWithSeatCount }}</strong> trẻ em <span class="note">(cần ghế riêng)</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="suggestion" *ngIf="getTotalSeatsNeeded() >= 1">{{ getSuggestedTables() }}</p>
+        <p class="warning" *ngIf="getTotalSeatsNeeded() > 6">
+          ⚠️ Nhóm lớn - Cần đặt nhiều bàn
         </p>
       </div>
 
       <!-- Table Selection -->
       <div class="table-selection card">
-        <h3>Select Tables</h3>
-        <p class="info">
-          Selected: {{ selectedTableIds.length }} table(s) | 
-          Capacity: {{ getTotalCapacity() }} guests
-        </p>
+        <h3>Chọn Bàn</h3>
+        <div class="selection-summary">
+          <div class="summary-item">
+            <span class="summary-label">Đã chọn:</span>
+            <span class="summary-value">{{ selectedTableIds.length }} bàn</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Tổng sức chứa:</span>
+            <span class="summary-value capacity">{{ getTotalCapacity() }} ghế</span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Số ghế cần:</span>
+            <span class="summary-value needed">{{ getTotalSeatsNeeded() }} ghế</span>
+          </div>
+          <div class="summary-status" *ngIf="selectedTableIds.length > 0">
+            <span *ngIf="getTotalCapacity() >= getTotalSeatsNeeded()" class="status-ok">
+              ✓ Đủ chỗ
+            </span>
+            <span *ngIf="getTotalCapacity() < getTotalSeatsNeeded()" class="status-not-enough">
+              ✗ Chưa đủ chỗ (thiếu {{ getTotalSeatsNeeded() - getTotalCapacity() }} ghế)
+            </span>
+          </div>
+        </div>
 
         <!-- 2-seat tables -->
         <div class="table-group" *ngIf="getTablesByCapacity(2).length > 0">

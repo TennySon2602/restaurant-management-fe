@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
 import { Table, MenuItem, Order, OrderItem } from '../../models';
@@ -9,7 +9,7 @@ import { Table, MenuItem, Order, OrderItem } from '../../models';
 @Component({
   selector: 'app-staff',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './staff.component.html',
   styleUrls: ['./staff.component.css']
 })
@@ -20,6 +20,8 @@ export class StaffComponent implements OnInit {
   currentOrder: OrderItem[] = [];
   selectedCategory = 'All';
   searchTerm = '';
+  showTableDetail = false;
+  currentView: 'tables' | 'reservations' = 'tables';
 
   categories: string[] = ['All', 'Appetizer', 'Main Course', 'Beverage', 'Dessert'];
 
@@ -41,7 +43,18 @@ export class StaffComponent implements OnInit {
 
   selectTable(table: Table): void {
     this.selectedTable = table;
-    this.currentOrder = [];
+    // Check if table has existing order
+    const existingOrder = this.dataService.getOrders().find(
+      o => o.tableId === table.id && o.status !== 'paid'
+    );
+    
+    if (existingOrder) {
+      this.currentOrder = [...existingOrder.items];
+    } else {
+      this.currentOrder = [];
+    }
+    
+    this.showTableDetail = true;
   }
 
   getFilteredMenuItems(): MenuItem[] {
@@ -102,6 +115,10 @@ export class StaffComponent implements OnInit {
     }
 
     const user = this.authService.getCurrentUser();
+    const subtotal = this.getOrderTotal();
+    const tax = subtotal * 0.1; // 10% VAT
+    const total = subtotal + tax;
+
     const order: Order = {
       id: `order-${Date.now()}`,
       tableId: this.selectedTable.id,
@@ -109,8 +126,11 @@ export class StaffComponent implements OnInit {
       status: 'pending',
       createdAt: new Date(),
       updatedAt: new Date(),
-      total: this.getOrderTotal(),
-      staffId: user?.id || 'unknown'
+      total,
+      subtotal,
+      tax,
+      staffId: user?.id || 'unknown',
+      paymentStatus: 'unpaid'
     };
 
     this.dataService.createOrder(order);
@@ -119,11 +139,31 @@ export class StaffComponent implements OnInit {
       status: 'occupied'
     });
 
-    // Reset
+    // Chuyển về view tables
+    this.showTableDetail = false;
     this.currentOrder = [];
     this.selectedTable = null;
     
-    alert('Order submitted successfully!');
+    alert('Đã gửi order đến bếp!');
+  }
+
+  proceedToCheckout(): void {
+    if (!this.selectedTable) return;
+    
+    // Tìm order của bàn này
+    const order = this.dataService.getOrders().find(
+      o => o.tableId === this.selectedTable!.id && o.status !== 'paid'
+    );
+    
+    if (order) {
+      this.router.navigate(['/staff/checkout', order.id]);
+    } else {
+      alert('Không tìm thấy order cho bàn này');
+    }
+  }
+
+  viewReservations(): void {
+    this.router.navigate(['/staff/reservations']);
   }
 
   mergeTables(): void {

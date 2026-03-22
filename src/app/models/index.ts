@@ -33,12 +33,43 @@ export interface OrderItem {
 export interface Order {
   id: string;
   tableId: string;
+  reservationId?: string; // Link to reservation if applicable
   items: OrderItem[];
   status: 'pending' | 'preparing' | 'ready' | 'served' | 'paid';
   createdAt: Date;
   updatedAt: Date;
   total: number;
+  subtotal: number;
+  tax: number;
+  discount?: number;
   staffId: string;
+  paymentStatus: 'unpaid' | 'paid' | 'partial';
+  paymentMethod?: 'cash' | 'card' | 'transfer' | 'mixed';
+  paymentDetails?: PaymentDetail[];
+}
+
+export interface PaymentDetail {
+  id: string;
+  method: 'cash' | 'card' | 'transfer';
+  amount: number;
+  timestamp: Date;
+  reference?: string; // Mã giao dịch cho thẻ/chuyển khoản
+}
+
+export interface Invoice {
+  id: string;
+  orderId: string;
+  tableNumber: number;
+  items: OrderItem[];
+  subtotal: number;
+  tax: number;
+  discount: number;
+  total: number;
+  paymentMethod: string;
+  paymentDetails: PaymentDetail[];
+  paidAt: Date;
+  staffName: string;
+  customerName?: string;
 }
 
 export interface Reservation {
@@ -48,9 +79,14 @@ export interface Reservation {
   date: string;
   time: string;
   guestCount: number;
+  childrenCount?: number; // Trẻ em (không cần ghế riêng - ngồi cùng người lớn)
+  childrenWithSeatCount?: number; // Trẻ em cần ghế riêng
   tableIds: string[];
   status: 'pending' | 'confirmed' | 'seated' | 'completed' | 'cancelled';
   notes?: string;
+  hasPreOrder?: boolean; // Đã đặt món trước hay chưa
+  preOrderItems?: OrderItem[]; // Món đã đặt trước
+  arrivalTime?: string; // Giờ khách thực tế đến
 }
 
 export interface Discount {

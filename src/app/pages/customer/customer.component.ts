@@ -23,6 +23,8 @@ export class CustomerComponent implements OnInit {
   date = '';
   time = '';
   guestCount = 2;
+  childrenCount = 0; // Trẻ em không cần ghế (dưới 5 tuổi)
+  childrenWithSeatCount = 0; // Trẻ em cần ghế riêng (từ 5-12 tuổi)
   notes = '';
   
   showSuccess = false;
@@ -64,28 +66,38 @@ export class CustomerComponent implements OnInit {
     }, 0);
   }
 
+  getTotalGuests(): number {
+    return this.guestCount + this.childrenCount + this.childrenWithSeatCount;
+  }
+
+  // Tổng số người cần ghế (để tính capacity)
+  getTotalSeatsNeeded(): number {
+    return this.guestCount + this.childrenWithSeatCount;
+  }
+
   submitReservation(): void {
     this.errorMessage = '';
 
     // Validation
     if (!this.customerName || !this.customerPhone) {
-      this.errorMessage = 'Please provide your name and phone number';
+      this.errorMessage = 'Vui lòng nhập tên và số điện thoại';
       return;
     }
 
     if (this.selectedTableIds.length === 0) {
-      this.errorMessage = 'Please select at least one table';
+      this.errorMessage = 'Vui lòng chọn ít nhất một bàn';
       return;
     }
 
     if (!this.date || !this.time) {
-      this.errorMessage = 'Please select date and time';
+      this.errorMessage = 'Vui lòng chọn ngày và giờ';
       return;
     }
 
     const totalCapacity = this.getTotalCapacity();
-    if (this.guestCount > totalCapacity) {
-      this.errorMessage = `Selected tables can only accommodate ${totalCapacity} guests`;
+    const seatsNeeded = this.getTotalSeatsNeeded();
+    if (seatsNeeded > totalCapacity) {
+      this.errorMessage = `Số ghế cần: ${seatsNeeded}, bàn đã chọn chỉ có ${totalCapacity} ghế`;
       return;
     }
 
@@ -97,9 +109,12 @@ export class CustomerComponent implements OnInit {
       date: this.date,
       time: this.time,
       guestCount: this.guestCount,
+      childrenCount: this.childrenCount,
+      childrenWithSeatCount: this.childrenWithSeatCount,
       tableIds: this.selectedTableIds,
       status: 'pending',
-      notes: this.notes
+      notes: this.notes,
+      hasPreOrder: false
     };
 
     this.dataService.createReservation(reservation);
@@ -128,6 +143,8 @@ export class CustomerComponent implements OnInit {
     this.customerName = '';
     this.customerPhone = '';
     this.guestCount = 2;
+    this.childrenCount = 0;
+    this.childrenWithSeatCount = 0;
     this.notes = '';
     const today = new Date();
     this.date = today.toISOString().split('T')[0];
@@ -147,17 +164,18 @@ export class CustomerComponent implements OnInit {
   }
 
   getSuggestedTables(): string {
-    if (this.guestCount <= 2) return 'Select a 2-seat table';
-    if (this.guestCount <= 4) return 'Select a 4-seat table';
-    if (this.guestCount <= 6) return 'Select a 6-seat table';
+    const seatsNeeded = this.getTotalSeatsNeeded();
+    if (seatsNeeded <= 2) return 'Gợi ý: Chọn bàn 2 chỗ';
+    if (seatsNeeded <= 4) return 'Gợi ý: Chọn bàn 4 chỗ';
+    if (seatsNeeded <= 6) return 'Gợi ý: Chọn bàn 6 chỗ';
     
-    const sixSeaters = Math.floor(this.guestCount / 6);
-    const remainder = this.guestCount % 6;
-    let suggestion = `Select ${sixSeaters} x 6-seat tables`;
+    const sixSeaters = Math.floor(seatsNeeded / 6);
+    const remainder = seatsNeeded % 6;
+    let suggestion = `Gợi ý: Chọn ${sixSeaters} bàn 6 chỗ`;
     if (remainder > 0) {
-      if (remainder <= 2) suggestion += ' + 1 x 2-seat table';
-      else if (remainder <= 4) suggestion += ' + 1 x 4-seat table';
-      else suggestion += ' + 1 x 6-seat table';
+      if (remainder <= 2) suggestion += ' + 1 bàn 2 chỗ';
+      else if (remainder <= 4) suggestion += ' + 1 bàn 4 chỗ';
+      else suggestion += ' + 1 bàn 6 chỗ';
     }
     return suggestion;
   }

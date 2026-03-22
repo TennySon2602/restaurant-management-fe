@@ -16,7 +16,20 @@ export const routes: Routes = [
   },
   {
     path: 'staff',
-    loadComponent: () => import('./pages/staff/staff.component').then(m => m.StaffComponent)
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/staff/staff.component').then(m => m.StaffComponent)
+      },
+      {
+        path: 'reservations',
+        loadComponent: () => import('./pages/staff/reservations/reservations.component').then(m => m.ReservationsComponent)
+      },
+      {
+        path: 'checkout/:orderId',
+        loadComponent: () => import('./pages/staff/checkout/checkout.component').then(m => m.CheckoutComponent)
+      }
+    ]
   },
   {
     path: 'manager',
