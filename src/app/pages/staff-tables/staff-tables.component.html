@@ -1,0 +1,104 @@
+<div class="staff-tables-container1">
+  <div class="staff-tables-thq-staff-tables-elm1">
+    <div class="staff-tables-thq-staff-layout-elm1">
+      <div class="staff-tables-thq-header-elm">
+        <div class="staff-tables-thq-container-elm10">
+          <div class="staff-tables-thq-container-elm11">
+            <div class="staff-tables-thq-heading2-elm1">
+              <span class="staff-tables-thq-text-elm10">Staff POS System</span>
+            </div>
+            <div class="staff-tables-thq-paragraph-elm1">
+              <span class="staff-tables-thq-text-elm11">
+                Table &amp; Order Management
+              </span>
+            </div>
+          </div>
+          <button class="staff-tables-thq-button-elm10" (click)="logout()">
+            <img
+              src="/assets/icon4529-ban8.svg"
+              alt="Icon4529"
+              class="staff-tables-thq-icon-elm1"
+            />
+            <div class="staff-tables-thq-text-elm12">
+              <span class="staff-tables-thq-text-elm13">Logout</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="staff-tables-thq-staff-tables-elm2">
+        <div class="staff-tables-thq-container-elm12">
+          <div class="staff-tables-thq-container-elm13">
+            <div class="staff-tables-thq-heading2-elm2">
+              <span class="staff-tables-thq-text-elm14">Floor Plan</span>
+            </div>
+            <div class="staff-tables-thq-paragraph-elm2">
+              <span class="staff-tables-thq-text-elm15">
+                Staff Terminal · Area: All
+              </span>
+            </div>
+          </div>
+          <div class="staff-tables-thq-container-elm14">
+            <div class="staff-tables-thq-container-elm15">
+              <div class="staff-tables-thq-container-elm16">
+                <div class="staff-tables-thq-container-elm17">
+                  <div class="staff-tables-thq-container-elm18" style="background-color:#22c55e;"></div>
+                  <div class="staff-tables-thq-text-elm16">
+                    <span class="staff-tables-thq-text-elm17">Available</span>
+                  </div>
+                </div>
+                <div class="staff-tables-thq-container-elm19">
+                  <div class="staff-tables-thq-container-elm20" style="background-color:#ef4444;"></div>
+                  <div class="staff-tables-thq-text-elm18">
+                    <span class="staff-tables-thq-text-elm19">Occupied</span>
+                  </div>
+                </div>
+                <div class="staff-tables-thq-container-elm21">
+                  <div class="staff-tables-thq-container-elm22" style="background-color:#f59e0b;"></div>
+                  <div class="staff-tables-thq-text-elm20">
+                    <span class="staff-tables-thq-text-elm21">Reserved</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="staff-tables-thq-container-elm25">
+          <button
+            *ngFor="let table of tables"
+            [class]="getTableClass(table)"
+            (click)="selectTable(table)"
+            [style.border-color]="getStatusColor(table.status)"
+            style="cursor:pointer"
+          >
+            <div class="staff-tables-thq-container-elm26">
+              <span class="staff-tables-thq-text-elm25">{{ table.id }}</span>
+            </div>
+            <div style="font-size:10px;color:#6a7282;font-family:Inter;margin-top:4px;">{{ table.seats }} seats · {{ table.location }}</div>
+            <div [style.background-color]="getStatusColor(table.status)"
+              style="height:4px;border-radius:0 0 8px 8px;margin-top:auto;width:100%;"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="staff-tables-thq-staff-layout-elm2">
+      <div class="staff-tables-thq-link-elm1" (click)="navigateTo('/staff-tables')" style="cursor:pointer">
+        <img src="/assets/icon4539-kj6p.svg" alt="Icon4539" class="staff-tables-thq-icon-elm5" />
+        <div class="staff-tables-thq-staff-layout-elm3">
+          <span class="staff-tables-thq-text-elm37">Tables</span>
+        </div>
+      </div>
+      <div class="staff-tables-thq-link-elm2" (click)="navigateTo('/staff-payment-history')" style="cursor:pointer">
+        <img src="/assets/icon4540-zc8m.svg" alt="Icon4540" class="staff-tables-thq-icon-elm6" />
+        <div class="staff-tables-thq-staff-layout-elm4">
+          <span class="staff-tables-thq-text-elm38">Payments History</span>
+        </div>
+      </div>
+      <div class="staff-tables-thq-link-elm3" (click)="navigateTo('/staff-shift')" style="cursor:pointer">
+        <img src="/assets/icon4541-mmnr.svg" alt="Icon4541" class="staff-tables-thq-icon-elm7" />
+        <div class="staff-tables-thq-staff-layout-elm5">
+          <span class="staff-tables-thq-text-elm39">Shift</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

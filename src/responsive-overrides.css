@@ -1,0 +1,1089 @@
+/* ============================================================
+   GLOBAL RESPONSIVE LAYOUT OVERRIDES
+   Fixes TeleportHQ fixed-pixel layout issues across all pages
+   ============================================================ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   LOGIN PAGE
+   ============================== */
+.loginform-thq-loginform-elm {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+}
+
+.loginform-thq-container-elm10 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 50% !important;
+  min-height: 100vh !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 40px !important;
+}
+
+.loginform-thq-container-elm11 {
+  width: 100% !important;
+  max-width: 448px !important;
+  height: auto !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+/* Fix all absolute-positioned children inside the login form inner container */
+.loginform-thq-heading1-elm,
+.loginform-thq-paragraph-elm1,
+.loginform-thq-form-elm,
+.loginform-thq-container-elm19,
+.loginform-thq-container-elm21 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+}
+
+.loginform-thq-heading1-elm {
+  height: auto !important;
+}
+
+.loginform-thq-text-elm10 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.loginform-thq-form-elm {
+  height: auto !important;
+  gap: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Fix input containers inside form */
+.loginform-thq-container-elm12,
+.loginform-thq-container-elm15,
+.loginform-thq-container-elm18 {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.loginform-thq-label-elm1,
+.loginform-thq-label-elm2 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.loginform-thq-container-elm13,
+.loginform-thq-container-elm16 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.loginform-thq-text-input-elm,
+.loginform-thq-password-input-elm {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Left visuals panel (background image side) */
+.loginform-thq-loginform-elm > *:not(.loginform-thq-container-elm10) {
+  flex: 1 !important;
+  min-height: 100vh !important;
+}
+
+/* Also fix the "Welcome Back" and "Enter credentials" text that are absolute inside heading */
+.loginform-thq-text-elm10,
+.loginform-thq-text-elm11,
+.loginform-thq-text-elm12,
+.loginform-thq-text-elm13,
+.loginform-thq-text-elm14,
+.loginform-thq-text-elm15,
+.loginform-thq-text-elm16,
+.loginform-thq-text-elm17,
+.loginform-thq-text-elm18,
+.loginform-thq-text-elm19,
+.loginform-thq-text-elm20,
+.loginform-thq-text-elm21 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* Quick demo buttons row */
+.loginform-thq-container-elm20 {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* All form element fixes */
+.loginform-thq-button-elm2,
+.loginform-thq-button-elm3,
+.loginform-thq-button-elm4,
+.loginform-thq-button-elm5,
+.loginform-thq-button-elm6 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+
+/* ==============================
+   MANAGER DASHBOARD
+   ============================== */
+.manager-dashboard-thq-manager-dashboard-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.manager-dashboard-thq-manager-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.manager-dashboard-thq-header-elm {
+  width: 100% !important;
+  flex-shrink: 0 !important;
+}
+
+.manager-dashboard-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.manager-dashboard-thq-manager-dashboard-elm2 {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+}
+
+.manager-dashboard-thq-container-elm12 {
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.manager-dashboard-thq-container-elm13,
+.manager-dashboard-thq-container-elm16,
+.manager-dashboard-thq-container-elm19,
+.manager-dashboard-thq-container-elm24 {
+  min-width: 180px !important;
+  flex: 1 1 180px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 160px !important;
+}
+
+/* Stat card inner absolute elements - fix to relative so they display inside card */
+.manager-dashboard-thq-container-elm14,
+.manager-dashboard-thq-container-elm17,
+.manager-dashboard-thq-container-elm20,
+.manager-dashboard-thq-container-elm25 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  gap: 0 !important;
+  justify-content: space-between !important;
+  margin-bottom: 8px !important;
+}
+
+.manager-dashboard-thq-paragraph-elm11,
+.manager-dashboard-thq-paragraph-elm12,
+.manager-dashboard-thq-paragraph-elm13,
+.manager-dashboard-thq-paragraph-elm14,
+.manager-dashboard-thq-paragraph-elm15,
+.manager-dashboard-thq-paragraph-elm16,
+.manager-dashboard-thq-paragraph-elm17,
+.manager-dashboard-thq-paragraph-elm18,
+.manager-dashboard-thq-paragraph-elm19,
+.manager-dashboard-thq-paragraph-elm20,
+.manager-dashboard-thq-paragraph-elm21 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.manager-dashboard-thq-text-elm15,
+.manager-dashboard-thq-text-elm18,
+.manager-dashboard-thq-text-elm21,
+.manager-dashboard-thq-text-elm23 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.manager-dashboard-thq-container-elm22,
+.manager-dashboard-thq-container-elm23 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Make the stat card content flow as flex column */
+.manager-dashboard-thq-container-elm13,
+.manager-dashboard-thq-container-elm16,
+.manager-dashboard-thq-container-elm19,
+.manager-dashboard-thq-container-elm24 {
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding: 20px !important;
+  gap: 8px !important;
+}
+
+/* MANAGER TABLES: Fix card inner text overlap */
+.manager-tables-thq-container-elm19,
+.manager-tables-thq-container-elm26,
+.manager-tables-thq-container-elm33,
+.manager-tables-thq-container-elm40,
+.manager-tables-thq-container-elm47,
+.manager-tables-thq-container-elm54,
+.manager-tables-thq-container-elm61,
+.manager-tables-thq-container-elm68,
+.manager-tables-thq-container-elm75,
+.manager-tables-thq-container-elm82,
+.manager-tables-thq-container-elm89,
+.manager-tables-thq-container-elm96 {
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  overflow: visible !important;
+}
+
+/* Fix the inner card content containers */
+.manager-tables-thq-container-elm20,
+.manager-tables-thq-container-elm27,
+.manager-tables-thq-container-elm34,
+.manager-tables-thq-container-elm41,
+.manager-tables-thq-container-elm48,
+.manager-tables-thq-container-elm55,
+.manager-tables-thq-container-elm62,
+.manager-tables-thq-container-elm69,
+.manager-tables-thq-container-elm76,
+.manager-tables-thq-container-elm83,
+.manager-tables-thq-container-elm90,
+.manager-tables-thq-container-elm97 {
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+/* Fix seats text and location containers */
+.manager-tables-thq-container-elm22,
+.manager-tables-thq-container-elm23,
+.manager-tables-thq-container-elm24,
+.manager-tables-thq-container-elm29,
+.manager-tables-thq-container-elm30,
+.manager-tables-thq-container-elm31 {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Table ID circle */
+.manager-tables-thq-container-elm21,
+.manager-tables-thq-container-elm28,
+.manager-tables-thq-container-elm35,
+.manager-tables-thq-container-elm42,
+.manager-tables-thq-container-elm49,
+.manager-tables-thq-container-elm56,
+.manager-tables-thq-container-elm63,
+.manager-tables-thq-container-elm70,
+.manager-tables-thq-container-elm77,
+.manager-tables-thq-container-elm84,
+.manager-tables-thq-container-elm91,
+.manager-tables-thq-container-elm98 {
+  flex-shrink: 0 !important;
+  align-self: center !important;
+}
+
+/* Action buttons container - fix negative top position */
+.manager-tables-thq-container-elm25,
+.manager-tables-thq-container-elm32,
+.manager-tables-thq-container-elm39,
+.manager-tables-thq-container-elm46,
+.manager-tables-thq-container-elm53,
+.manager-tables-thq-container-elm60,
+.manager-tables-thq-container-elm67,
+.manager-tables-thq-container-elm74,
+.manager-tables-thq-container-elm81,
+.manager-tables-thq-container-elm88,
+.manager-tables-thq-container-elm95,
+.manager-tables-thq-container-elm102 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  justify-content: flex-end !important;
+  padding: 8px 16px !important;
+}
+
+.manager-dashboard-thq-container-elm27 {
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  align-items: flex-start !important;
+}
+
+.manager-dashboard-thq-container-elm28 {
+  flex: 1 1 300px !important;
+  min-width: 0 !important;
+}
+
+/* Bottom sidebar nav - fixed at bottom */
+.manager-dashboard-thq-manager-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   MANAGER MENU
+   ============================== */
+.manager-menu-thq-manager-menu-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.manager-menu-thq-manager-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.manager-menu-thq-header-elm {
+  width: 100% !important;
+}
+
+.manager-menu-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.manager-menu-thq-manager-menu-elm2 {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+}
+
+.manager-menu-thq-container-elm12 {
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.manager-menu-thq-container-elm13 {
+  height: auto !important;
+}
+
+.manager-menu-thq-container-elm14 {
+  height: auto !important;
+  padding: 8px 16px !important;
+  overflow: visible !important;
+}
+
+.manager-menu-thq-container-elm15 {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.manager-menu-thq-button-elm12,
+.manager-menu-thq-button-elm13,
+.manager-menu-thq-button-elm14,
+.manager-menu-thq-button-elm15,
+.manager-menu-thq-button-elm16 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.manager-menu-thq-container-elm16 {
+  height: auto !important;
+  overflow: visible !important;
+  max-height: none !important;
+  width: 100% !important;
+}
+
+/* The table wrapper */
+.manager-menu-thq-table-elm {
+  width: 100% !important;
+  height: auto !important;
+  position: relative !important;
+  overflow-x: auto !important;
+  display: block !important;
+  min-height: 200px !important;
+}
+
+/* Table header: unstick it */
+.manager-menu-thq-table-header-elm {
+  width: 100% !important;
+  min-width: 600px !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  display: flex !important;
+}
+
+/* Table body */
+.manager-menu-thq-table-body-elm {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  min-width: 600px !important;
+  height: auto !important;
+  flex-direction: column !important;
+  overflow-y: visible !important;
+}
+
+/* Each table row */
+.manager-menu-thq-table-row-elm2 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+}
+
+.manager-menu-thq-manager-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   MANAGER TABLES
+   ============================== */
+.manager-tables-thq-manager-tables-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.manager-tables-thq-manager-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.manager-tables-thq-header-elm {
+  width: 100% !important;
+}
+
+.manager-tables-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.manager-tables-thq-manager-tables-elm2 {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+}
+
+/* CRITICAL: Table cards container - make it a flex grid instead of absolute-everything */
+.manager-tables-thq-container-elm18 {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+}
+
+/* Each individual table card - remove absolute position that makes them stack */
+.manager-tables-thq-container-elm19,
+.manager-tables-thq-container-elm26,
+.manager-tables-thq-container-elm33,
+.manager-tables-thq-container-elm40,
+.manager-tables-thq-container-elm47,
+.manager-tables-thq-container-elm54,
+.manager-tables-thq-container-elm61,
+.manager-tables-thq-container-elm68,
+.manager-tables-thq-container-elm75,
+.manager-tables-thq-container-elm82,
+.manager-tables-thq-container-elm89,
+.manager-tables-thq-container-elm96 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 220px !important;
+  flex-shrink: 0 !important;
+  height: auto !important;
+  min-height: 200px !important;
+}
+
+/* Since the container inside each card is also absolute, fix it */
+.manager-tables-thq-container-elm20,
+.manager-tables-thq-container-elm27,
+.manager-tables-thq-container-elm34,
+.manager-tables-thq-container-elm41,
+.manager-tables-thq-container-elm48,
+.manager-tables-thq-container-elm55,
+.manager-tables-thq-container-elm62,
+.manager-tables-thq-container-elm69,
+.manager-tables-thq-container-elm76,
+.manager-tables-thq-container-elm83,
+.manager-tables-thq-container-elm90,
+.manager-tables-thq-container-elm97 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  padding: 16px 0 0 !important;
+}
+
+/* Action buttons (edit/delete) - fix negative top */
+.manager-tables-thq-container-elm25,
+.manager-tables-thq-container-elm32,
+.manager-tables-thq-container-elm39,
+.manager-tables-thq-container-elm46,
+.manager-tables-thq-container-elm53,
+.manager-tables-thq-container-elm60,
+.manager-tables-thq-container-elm67,
+.manager-tables-thq-container-elm74,
+.manager-tables-thq-container-elm81,
+.manager-tables-thq-container-elm88,
+.manager-tables-thq-container-elm95,
+.manager-tables-thq-container-elm102 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  justify-content: flex-end !important;
+}
+
+/* For dynamic generated cards with *ngFor - covers all generated cards */
+[class^="manager-tables-thq-container-elm"] {
+  max-width: 100% !important;
+}
+
+/* Dynamic ngFor-generated table cards */
+.manager-tables-thq-container-elm18 > .manager-tables-thq-container-elm19 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.manager-tables-thq-manager-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   STAFF TABLES (FLOOR PLAN)
+   ============================== */
+.staff-tables-thq-staff-tables-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+}
+
+.staff-tables-thq-staff-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.staff-tables-thq-header-elm {
+  width: 100% !important;
+}
+
+.staff-tables-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.staff-tables-thq-staff-tables-elm2 {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+}
+
+.staff-tables-thq-container-elm12 {
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.staff-tables-thq-container-elm14 {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.staff-tables-thq-container-elm15 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+
+.staff-tables-thq-button-elm11 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.staff-tables-thq-container-elm25 {
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  height: auto !important;
+  align-items: flex-start !important;
+}
+
+/* All table buttons on floor plan */
+[class*="staff-tables-thq-button-elm"] {
+  min-width: 140px !important;
+  flex: 1 1 140px !important;
+  max-width: 252px !important;
+}
+
+.staff-tables-thq-staff-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   STAFF TABLE DETAILS (ORDER PAGE)
+   ============================== */
+.staff-table-details-thq-staff-table-details-elm {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+}
+
+.staff-table-details-thq-staff-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.staff-table-details-thq-header-elm {
+  width: 100% !important;
+}
+
+.staff-table-details-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.staff-table-details-thq-staff-tables-elm {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+  overflow: visible !important;
+  flex-wrap: wrap !important;
+  min-height: 0 !important;
+}
+
+.staff-table-details-thq-container-elm12 {
+  flex-shrink: 0 !important;
+  min-width: 180px !important;
+  max-width: 240px !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.staff-table-details-thq-container-elm15 {
+  flex: 1 !important;
+  min-width: 260px !important;
+  max-width: 420px !important;
+  overflow-y: auto !important;
+  width: auto !important;
+}
+
+.staff-table-details-thq-container-elm22 {
+  flex: 1 !important;
+  min-width: 300px !important;
+  max-width: 480px !important;
+  overflow-y: auto !important;
+  width: auto !important;
+}
+
+.staff-table-details-thq-staff-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   MANAGER INVENTORY & REPORT
+   ============================== */
+.manager-inventory-thq-manager-inventory-elm1,
+.manager-report-thq-manager-report-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.manager-inventory-thq-manager-layout-elm1,
+.manager-report-thq-manager-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.manager-inventory-thq-header-elm,
+.manager-report-thq-header-elm {
+  width: 100% !important;
+}
+
+.manager-inventory-thq-container-elm10,
+.manager-report-thq-container-elm10 {
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+.manager-inventory-thq-manager-inventory-elm2,
+.manager-report-thq-manager-report-elm2 {
+  width: 100% !important;
+  height: auto !important;
+  flex: 1 !important;
+}
+
+.manager-inventory-thq-manager-layout-elm2,
+.manager-report-thq-manager-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   STAFF SHIFT & PAYMENT HISTORY
+   ============================== */
+.staff-shift-thq-staff-shift-elm1,
+.staff-payment-history-thq-staff-payment-history-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+}
+
+.staff-shift-thq-staff-layout-elm1,
+.staff-payment-history-thq-staff-layout-elm1 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: calc(100vh - 72px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding-bottom: 72px !important;
+}
+
+.staff-shift-thq-staff-layout-elm2,
+.staff-payment-history-thq-staff-layout-elm2 {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 100 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  background-color: rgba(45, 45, 45, 1) !important;
+  padding: 8px 24px !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+/* ==============================
+   CUSTOMER PAGES
+   ============================== */
+.customer-home-thq-customer-home-elm1,
+.customer-menu-thq-customer-menu-elm1,
+.customer-profile-thq-customer-profile-elm1,
+.customerbooking-thq-customerbooking-elm1,
+.customer-confirm-booking-thq-customer-confirm-booking-elm1 {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* ==============================
+   RESPONSIVE BREAKPOINTS
+   ============================== */
+@media (max-width: 1280px) {
+  .manager-dashboard-thq-container-elm28 {
+    min-width: 250px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .loginform-thq-container-elm10 {
+    width: 100% !important;
+  }
+  .loginform-thq-loginform-elm {
+    flex-direction: column !important;
+  }
+
+  .staff-table-details-thq-staff-tables-elm {
+    flex-direction: column !important;
+  }
+
+  .staff-table-details-thq-container-elm12 {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    height: auto !important;
+  }
+
+  .staff-table-details-thq-container-elm15,
+  .staff-table-details-thq-container-elm22 {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .manager-dashboard-thq-container-elm12,
+  .manager-dashboard-thq-container-elm27 {
+    flex-direction: column !important;
+  }
+
+  .manager-dashboard-thq-container-elm13,
+  .manager-dashboard-thq-container-elm16,
+  .manager-dashboard-thq-container-elm19,
+  .manager-dashboard-thq-container-elm24 {
+    width: 100% !important;
+    flex: unset !important;
+  }
+
+  .staff-tables-thq-container-elm25 {
+    justify-content: center !important;
+  }
+
+  [class*="staff-tables-thq-button-elm"] {
+    flex: 1 1 calc(33% - 12px) !important;
+    min-width: 100px !important;
+    max-width: none !important;
+  }
+
+  .manager-tables-thq-container-elm18 {
+    justify-content: center !important;
+  }
+
+  .manager-tables-thq-container-elm19,
+  .manager-tables-thq-container-elm26,
+  .manager-tables-thq-container-elm33,
+  .manager-tables-thq-container-elm40,
+  .manager-tables-thq-container-elm47,
+  .manager-tables-thq-container-elm54 {
+    width: calc(50% - 8px) !important;
+    flex: 1 1 calc(50% - 8px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  [class*="staff-tables-thq-button-elm"] {
+    flex: 1 1 calc(50% - 12px) !important;
+  }
+
+  .manager-tables-thq-container-elm19,
+  .manager-tables-thq-container-elm26,
+  .manager-tables-thq-container-elm33 {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+}

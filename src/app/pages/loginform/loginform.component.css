@@ -1,0 +1,824 @@
+:host { 
+  display: contents; 
+}
+ 
+.loginform-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.loginform-thq-loginform-elm {
+  width: 100%;
+  height: 658px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-container-elm10 {
+  top: 0px;
+  left: 563.2000122070312px;
+  width: 563px;
+  height: 658px;
+  display: flex;
+  padding: 0 57.60003662109375px 0 57.5999755859375px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.loginform-thq-container-elm11 {
+  width: 448px;
+  height: 542.6000366210938px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-heading1-elm {
+  top: 0px;
+  left: 0px;
+  width: 448px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm10 {
+  top: -2.4000015258789062px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 36px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-paragraph-elm1 {
+  top: 44px;
+  left: 0px;
+  width: 448px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm11 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-form-elm {
+  gap: 15.999992370605469px;
+  top: 91.00000762939453px;
+  left: 0px;
+  width: 448px;
+  height: 282.3999938964844px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.loginform-thq-container-elm12 {
+  width: 448px;
+  height: 83.20000457763672px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.loginform-thq-label-elm1 {
+  top: 8px;
+  left: 0px;
+  width: 172px;
+  height: 13.600000381469727px;
+  display: flex;
+  padding: 0 4px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm12 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-container-elm13 {
+  top: 24px;
+  left: 0px;
+  width: 448px;
+  height: 59.20000076293945px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-input-elm {
+  top: 0px;
+  left: 0px;
+  color: rgba(45, 45, 45, 0.5);
+  width: 448px;
+  height: 59.20000076293945px;
+  display: flex;
+  padding: 16px 16px 16px 44px;
+  overflow: hidden;
+  position: absolute;
+  font-size: 16px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+  text-align: left;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: Inter;
+  font-weight: 700;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 1.600000023841858px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-container-elm14 {
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 59.20000076293945px;
+  display: flex;
+  padding: 0 0 0 16px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-icon-elm1 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.loginform-thq-container-elm15 {
+  width: 448px;
+  height: 83.20000457763672px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.loginform-thq-label-elm2 {
+  top: 8px;
+  left: 0px;
+  width: 76px;
+  height: 13.600000381469727px;
+  display: flex;
+  padding: 0 4px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm13 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-container-elm16 {
+  top: 24px;
+  left: 0px;
+  width: 448px;
+  height: 59.20000076293945px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-password-input-elm {
+  top: 0px;
+  left: 0px;
+  color: rgba(45, 45, 45, 0.5);
+  width: 448px;
+  height: 59.20000076293945px;
+  display: flex;
+  padding: 16px 48px 16px 44px;
+  overflow: hidden;
+  position: absolute;
+  font-size: 16px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+  text-align: left;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: Inter;
+  font-weight: 700;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 1.600000023841858px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-container-elm17 {
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 59.20000076293945px;
+  display: flex;
+  padding: 0 0 0 16px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-icon-elm2 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.loginform-thq-button-elm1 {
+  top: 0px;
+  left: 412.00006103515625px;
+  width: 36px;
+  height: 59.20000076293945px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-icon-elm3 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.loginform-thq-container-elm18 {
+  gap: 233.60000610351562px;
+  display: flex;
+  padding: 0 4px;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+ 
+.loginform-thq-label-elm3 {
+  gap: 8px;
+  width: 106.4000015258789px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-checkbox-elm {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm14 {
+  height: 15.987500190734863px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm15 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-button-elm2 {
+  width: 100px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm16 {
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-button-elm3 {
+  width: 448px;
+  height: 52px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  border-radius: 16px;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.loginform-thq-text-elm17 {
+  top: 15px;
+  left: 187.300048828125px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-icon-elm4 {
+  top: 18px;
+  left: 246.70001220703125px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+ 
+.loginform-thq-container-elm19 {
+  gap: 12px;
+  top: 397.4000244140625px;
+  left: 0px;
+  width: 448px;
+  height: 55.60000228881836px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.loginform-thq-paragraph-elm2 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm18 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-container-elm20 {
+  width: 448px;
+  height: 28.600000381469727px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.loginform-thq-button-elm4 {
+  top: 0px;
+  left: 120.800048828125px;
+  width: 73px;
+  height: 28.600000381469727px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-text-elm19 {
+  top: 5.79998779296875px;
+  left: 12.79998779296875px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-button-elm5 {
+  top: 0px;
+  left: 201.60003662109375px;
+  width: 49px;
+  height: 28.600000381469727px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-text-elm20 {
+  top: 5.79998779296875px;
+  left: 12.79998779296875px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-button-elm6 {
+  top: 0px;
+  left: 258.4000244140625px;
+  width: 69px;
+  height: 28.600000381469727px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.loginform-thq-text-elm21 {
+  top: 5.79998779296875px;
+  left: 12.79998779296875px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-container-elm21 {
+  top: 485.0000305175781px;
+  left: 0px;
+  width: 448px;
+  height: 57.60000228881836px;
+  display: flex;
+  padding: 33.5999755859375px 0 0;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 1.600000023841858px 0 0;
+  flex-direction: column;
+}
+ 
+.loginform-thq-paragraph-elm3 {
+  width: 448px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.loginform-thq-text-elm22 {
+  top: 2.20001220703125px;
+  left: 102.60003662109375px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-button-elm7 {
+  top: 0px;
+  left: 216px;
+  width: 130px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm23 {
+  top: -2.20001220703125px;
+  left: -5px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-container-elm22 {
+  top: 0px;
+  left: 0px;
+  width: 563px;
+  height: 658px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.loginform-thq-image-restaurant-interior-elm {
+  top: -32.920021057128906px;
+  left: -28.160009384155273px;
+  width: 619px;
+  height: 723.7999877929688px;
+  display: flex;
+  opacity: 0.60;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.loginform-thq-container-elm23 {
+  top: 0px;
+  left: 0px;
+  width: 563px;
+  height: 658.4000244140625px;
+  display: flex;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(45, 45, 45, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-container-elm24 {
+  top: 286.3999938964844px;
+  left: 48px;
+  width: 467px;
+  height: 324px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-container-elm25 {
+  gap: 12px;
+  top: 0px;
+  left: 0px;
+  width: 467px;
+  height: 48px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-container-elm26 {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  padding: 0 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.loginform-thq-icon-elm5 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.loginform-thq-heading2-elm {
+  width: 113.5999984741211px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm24 {
+  top: -2.399993896484375px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 36px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-heading3-elm {
+  top: 72px;
+  left: 0px;
+  width: 467px;
+  height: 180px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm25 {
+  top: -3.399993896484375px;
+  color: rgba(255, 255, 255, 1);
+  width: 313px;
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 60px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-text-elm26 {
+  top: 116.60000610351562px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 48px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 60px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-thq-paragraph-elm4 {
+  top: 268.0000305175781px;
+  left: 0px;
+  width: 448px;
+  height: 56px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.loginform-thq-text-elm27 {
+  top: -1.4000244140625px;
+  color: rgba(255, 255, 255, 0.699999988079071);
+  width: 361px;
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 28px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.loginform-link {
+  display: contents;
+}
+ 
+.loginform-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.loginform-icon1 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.loginform-text {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

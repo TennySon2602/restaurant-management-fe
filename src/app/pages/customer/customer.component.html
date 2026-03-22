@@ -1,13 +1,142 @@
 <div class="customer-container">
   <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <h1>🍜 Vietnamese Restaurant</h1>
-      <button (click)="logout()" class="btn-secondary">Logout</button>
-    </div>
+  <header class="customer-header card">
+    <h1>🍜 Đặt Bàn Nhà Hàng</h1>
+    <p>Trải nghiệm ẩm thực Việt Nam chính gốc</p>
   </header>
 
-  <div class="content">
+  <!-- Logout & History Buttons -->
+  <div class="logout-section">
+    <button (click)="toggleHistory()" class="btn-outline">
+      {{ showHistory ? '📝 Quay lại đặt bàn' : '📜 Lịch sử đặt bàn' }}
+    </button>
+    <button (click)="logout()" class="btn-secondary">Đăng xuất</button>
+  </div>
+
+  <!-- History Section -->
+  <div *ngIf="showHistory" class="history-section">
+    <div class="history-search card">
+      <h2>🔍 Tra cứu lịch sử đặt bàn</h2>
+      <div class="search-form">
+        <input 
+          type="tel" 
+          [(ngModel)]="searchPhone" 
+          placeholder="Nhập số điện thoại (10 số)"
+          maxlength="10"
+          class="search-input">
+        <button (click)="searchHistory()" class="btn">Tìm kiếm</button>
+      </div>
+    </div>
+
+    <!-- My Reservations -->
+    <div *ngIf="myReservations.length > 0" class="my-reservations">
+      <h2>📋 Lịch sử đặt bàn của bạn</h2>
+      <p class="history-count">Tìm thấy {{ myReservations.length }} đặt bàn</p>
+      
+      <div class="reservations-list">
+        <div *ngFor="let reservation of myReservations" class="history-card card">
+          <!-- Status Badge -->
+          <div class="reservation-status-header">
+            <span class="status-badge" [ngClass]="getStatusClass(reservation.status)">
+              {{ getStatusText(reservation.status) }}
+            </span>
+            <span class="reservation-id">{{ reservation.id }}</span>
+          </div>
+
+          <!-- Date & Time -->
+          <div class="reservation-datetime">
+            <div class="datetime-item">
+              <span class="datetime-icon">📅</span>
+              <div class="datetime-info">
+                <span class="datetime-label">Ngày</span>
+                <span class="datetime-value">{{ reservation.date }}</span>
+              </div>
+            </div>
+            <div class="datetime-item">
+              <span class="datetime-icon">🕐</span>
+              <div class="datetime-info">
+                <span class="datetime-label">Giờ</span>
+                <span class="datetime-value">{{ reservation.time }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Info -->
+          <div class="reservation-info">
+            <div class="info-row">
+              <span class="info-label">👤 Tên:</span>
+              <span class="info-value">{{ reservation.customerName }}</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">📞 SĐT:</span>
+              <span class="info-value">{{ reservation.customerPhone }}</span>
+            </div>
+          </div>
+
+          <!-- Guest Details -->
+          <div class="reservation-guests">
+            <h4>👥 Thông tin khách</h4>
+            <div class="guests-breakdown">
+              <div class="guest-item">
+                <span class="guest-icon">👤</span>
+                <span class="guest-text">{{ reservation.guestCount }} người lớn</span>
+              </div>
+              <div *ngIf="reservation.childrenCount && reservation.childrenCount > 0" class="guest-item">
+                <span class="guest-icon">👶</span>
+                <span class="guest-text">{{ reservation.childrenCount }} trẻ nhỏ (không ghế)</span>
+              </div>
+              <div *ngIf="reservation.childrenWithSeatCount && reservation.childrenWithSeatCount > 0" class="guest-item">
+                <span class="guest-icon">🧒</span>
+                <span class="guest-text">{{ reservation.childrenWithSeatCount }} trẻ em (cần ghế)</span>
+              </div>
+            </div>
+            <div class="guests-total">
+              <span class="total-label">Tổng số người:</span>
+              <span class="total-value">{{ reservation.guestCount + (reservation.childrenCount || 0) + (reservation.childrenWithSeatCount || 0) }}</span>
+            </div>
+          </div>
+
+          <!-- Tables -->
+          <div class="reservation-tables">
+            <span class="tables-label">🪑 Bàn số:</span>
+            <div class="tables-list">
+              <span *ngFor="let tableId of reservation.tableIds" class="table-badge">
+                {{ tableId.replace('table-', '') }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div *ngIf="reservation.notes" class="reservation-notes">
+            <span class="notes-label">📝 Ghi chú:</span>
+            <p class="notes-text">{{ reservation.notes }}</p>
+          </div>
+
+          <!-- Pre-order Badge -->
+          <div *ngIf="reservation.hasPreOrder" class="preorder-badge">
+            ✅ Đã đặt món trước
+          </div>
+
+          <!-- Actions -->
+          <div class="reservation-actions" *ngIf="canCancel(reservation)">
+            <button (click)="cancelReservation(reservation)" class="btn-danger btn-sm">
+              ❌ Hủy đặt bàn
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Reservations -->
+    <div *ngIf="myReservations.length === 0 && searchPhone" class="no-reservations card">
+      <div class="empty-icon">📭</div>
+      <h3>Không tìm thấy đặt bàn</h3>
+      <p>Không có lịch sử đặt bàn nào với số điện thoại này.</p>
+    </div>
+  </div>
+
+  <!-- Booking Form (Original) -->
+  <div *ngIf="!showHistory" class="booking-form">
     <div class="booking-section fade-in">
       <h2>Make a Reservation</h2>
       <p class="subtitle">Book your table for an authentic Vietnamese dining experience</p>
@@ -96,23 +225,23 @@
       <div class="table-selection card">
         <h3>Chọn Bàn</h3>
         <div class="selection-summary">
-          <div class="summary-item">
+          <div class="summary-row">
             <span class="summary-label">Đã chọn:</span>
             <span class="summary-value">{{ selectedTableIds.length }} bàn</span>
           </div>
-          <div class="summary-item">
+          <div class="summary-row">
             <span class="summary-label">Tổng sức chứa:</span>
-            <span class="summary-value capacity">{{ getTotalCapacity() }} ghế</span>
+            <span class="summary-value">{{ getTotalCapacity() }} ghế</span>
           </div>
-          <div class="summary-item">
+          <div class="summary-row">
             <span class="summary-label">Số ghế cần:</span>
-            <span class="summary-value needed">{{ getTotalSeatsNeeded() }} ghế</span>
+            <span class="summary-value">{{ getTotalSeatsNeeded() }} ghế</span>
           </div>
-          <div class="summary-status" *ngIf="selectedTableIds.length > 0">
-            <span *ngIf="getTotalCapacity() >= getTotalSeatsNeeded()" class="status-ok">
+          <div class="summary-row" *ngIf="selectedTableIds.length > 0">
+            <span *ngIf="getTotalCapacity() >= getTotalSeatsNeeded()" class="summary-value" style="color: #065f46; background: #d1fae5; padding: 0.5rem; border-radius: 0.5rem; width: 100%; text-align: center;">
               ✓ Đủ chỗ
             </span>
-            <span *ngIf="getTotalCapacity() < getTotalSeatsNeeded()" class="status-not-enough">
+            <span *ngIf="getTotalCapacity() < getTotalSeatsNeeded()" class="summary-value" style="color: #991b1b; background: #fee2e2; padding: 0.5rem; border-radius: 0.5rem; width: 100%; text-align: center;">
               ✗ Chưa đủ chỗ (thiếu {{ getTotalSeatsNeeded() - getTotalCapacity() }} ghế)
             </span>
           </div>
@@ -120,54 +249,54 @@
 
         <!-- 2-seat tables -->
         <div class="table-group" *ngIf="getTablesByCapacity(2).length > 0">
-          <h4>2-Seat Tables</h4>
+          <h4 class="table-group-header">Bàn 2 Chỗ</h4>
           <div class="table-grid">
-            <button
+            <div
               *ngFor="let table of getTablesByCapacity(2)"
               [class.selected]="isTableSelected(table.id)"
               (click)="toggleTableSelection(table.id)"
-              class="table-button">
-              <span class="table-number">{{ table.number }}</span>
-              <span class="table-capacity">{{ table.capacity }} seats</span>
-            </button>
+              class="table-card">
+              <span class="table-number">Bàn {{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} chỗ</span>
+            </div>
           </div>
         </div>
 
         <!-- 4-seat tables -->
         <div class="table-group" *ngIf="getTablesByCapacity(4).length > 0">
-          <h4>4-Seat Tables</h4>
+          <h4 class="table-group-header">Bàn 4 Chỗ</h4>
           <div class="table-grid">
-            <button
+            <div
               *ngFor="let table of getTablesByCapacity(4)"
               [class.selected]="isTableSelected(table.id)"
               (click)="toggleTableSelection(table.id)"
-              class="table-button">
-              <span class="table-number">{{ table.number }}</span>
-              <span class="table-capacity">{{ table.capacity }} seats</span>
-            </button>
+              class="table-card">
+              <span class="table-number">Bàn {{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} chỗ</span>
+            </div>
           </div>
         </div>
 
         <!-- 6-seat tables -->
         <div class="table-group" *ngIf="getTablesByCapacity(6).length > 0">
-          <h4>6-Seat Tables</h4>
+          <h4 class="table-group-header">Bàn 6 Chỗ</h4>
           <div class="table-grid">
-            <button
+            <div
               *ngFor="let table of getTablesByCapacity(6)"
               [class.selected]="isTableSelected(table.id)"
               (click)="toggleTableSelection(table.id)"
-              class="table-button">
-              <span class="table-number">{{ table.number }}</span>
-              <span class="table-capacity">{{ table.capacity }} seats</span>
-            </button>
+              class="table-card">
+              <span class="table-number">Bàn {{ table.number }}</span>
+              <span class="table-capacity">{{ table.capacity }} chỗ</span>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Booking Form -->
-      <form (ngSubmit)="submitReservation()" class="booking-form card">
-        <h3>Your Details</h3>
-
+      <div class="form-section card">
+        <h3>Thông Tin Của Bạn</h3>
+        
         <div class="form-row">
           <div class="form-group">
             <label for="name">Full Name *</label>
@@ -239,10 +368,10 @@
           {{ errorMessage }}
         </div>
 
-        <button type="submit" class="btn-primary submit-button">
+        <button type="submit" (click)="submitReservation()" class="btn-primary submit-button">
           Confirm Reservation
         </button>
-      </form>
+      </div>
 
       <!-- Success Message -->
       <div *ngIf="showSuccess" class="success-overlay">

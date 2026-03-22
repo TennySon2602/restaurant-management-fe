@@ -1,0 +1,1196 @@
+:host { 
+  display: contents; 
+}
+ 
+.customer-menu-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-customer-menu-elm1 {
+  width: 100%;
+  height: 1613px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-customer-layout-elm1 {
+  top: 0px;
+  left: 0px;
+  width: 1112px;
+  height: 658.4000244140625px;
+  display: flex;
+  padding: 196.40000915527344px 0 0 300px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.customer-menu-thq-customer-menu-elm2 {
+  width: 512px;
+  height: 1312px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-button-elm10 {
+  top: 16px;
+  left: 16px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm10 {
+  gap: 4px;
+  top: 231.99998474121094px;
+  left: 0px;
+  width: 232px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm1 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm10 {
+  top: -2.199981689453125px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm1 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm11 {
+  top: -2.199981689453125px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-container-elm11 {
+  top: 0px;
+  left: 0px;
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm1 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-button-elm11 {
+  top: 16px;
+  left: 264px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm12 {
+  gap: 4px;
+  top: 231.99998474121094px;
+  left: 0px;
+  width: 232px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm2 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm12 {
+  top: -2.199981689453125px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm2 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm13 {
+  top: -2.199981689453125px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-container-elm13 {
+  top: 0px;
+  left: 0px;
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm2 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-button-elm12 {
+  top: 340px;
+  left: 16px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm14 {
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm3 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-container-elm15 {
+  gap: 4px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm3 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm14 {
+  top: -2.20001220703125px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm3 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm15 {
+  top: -2.20001220703125px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm13 {
+  top: 340px;
+  left: 264px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm16 {
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm4 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-container-elm17 {
+  gap: 4px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm4 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm16 {
+  top: -2.20001220703125px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm4 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm17 {
+  top: -2.20001220703125px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm14 {
+  top: 664px;
+  left: 16px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm18 {
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm5 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-container-elm19 {
+  gap: 4px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm5 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm18 {
+  top: -2.199951171875px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm5 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm19 {
+  top: -2.199951171875px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm15 {
+  top: 664px;
+  left: 264px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm20 {
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm6 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-container-elm21 {
+  gap: 4px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm6 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm20 {
+  top: -2.199951171875px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm6 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm21 {
+  top: -2.199951171875px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm16 {
+  top: 988px;
+  left: 16px;
+  width: 232px;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm22 {
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-image-with-fallback-elm7 {
+  width: 232px;
+  height: 232px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  background-size: cover;
+  background-image: url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+ 
+.customer-menu-thq-container-elm23 {
+  gap: 4px;
+  height: 76px;
+  display: flex;
+  padding: 12px 12px 0;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-heading4-elm7 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm22 {
+  top: -2.199951171875px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-paragraph-elm7 {
+  width: 208px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm23 {
+  top: -2.199951171875px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-customer-layout-elm2 {
+  top: 1544px;
+  left: 0px;
+  width: 1112px;
+  height: 68.7874984741211px;
+  display: flex;
+  padding: 0.800048828125px 300px 0;
+  position: absolute;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 0.800000011920929px 0 0;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm24 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-link-elm1 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-icon-elm1 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-menu-thq-customer-layout-elm3 {
+  width: 32.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-text-elm24 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-link-elm2 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-icon-elm2 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-menu-thq-customer-layout-elm4 {
+  width: 29.600000381469727px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-text-elm25 {
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-link-elm3 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-icon-elm3 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-menu-thq-customer-layout-elm5 {
+  width: 66.4000015258789px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-text-elm26 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-link-elm4 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-icon-elm4 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-menu-thq-customer-layout-elm6 {
+  width: 34.400001525878906px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-text-elm27 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-customer-menu-elm3 {
+  top: 60.79999923706055px;
+  left: 300px;
+  width: 512px;
+  height: 62.79999923706055px;
+  display: flex;
+  padding: 16.000003814697266px 16px 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-heading2-elm {
+  width: 480px;
+  height: 30px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.customer-menu-thq-text-elm28 {
+  top: -2.2000045776367188px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 30px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-customer-menu-elm4 {
+  gap: 7.999992370605469px;
+  top: 123.5999984741211px;
+  left: 300px;
+  width: 512px;
+  height: 72px;
+  display: flex;
+  padding: 16.00000762939453px 0 0 16px;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.customer-menu-thq-button-elm17 {
+  width: 50.400001525878906px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.customer-menu-thq-text-elm29 {
+  top: 5.8000030517578125px;
+  left: 15px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm18 {
+  width: 108.80000305175781px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-text-elm30 {
+  top: 5.8000030517578125px;
+  left: 13px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm19 {
+  width: 75.20000457763672px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-text-elm31 {
+  top: 5.8000030517578125px;
+  left: 15px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm20 {
+  width: 94.4000015258789px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-text-elm32 {
+  top: 5.8000030517578125px;
+  left: 13px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-customer-layout-elm7 {
+  gap: 946px;
+  top: 0px;
+  left: 0px;
+  width: 1112px;
+  height: 60.79999923706055px;
+  display: flex;
+  padding: 0 16px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-menu-thq-container-elm25 {
+  gap: 8px;
+  width: 98px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-container-elm26 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  padding: 0 8px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.customer-menu-thq-icon-elm5 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.customer-menu-thq-text-elm33 {
+  width: 58px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-menu-thq-text-elm34 {
+  top: -2.1999988555908203px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-menu-thq-button-elm21 {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  padding: 8px 8px 0;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-menu-thq-icon-elm6 {
+  width: 20px;
+  height: 20px;
+  align-self: stretch;
+}
+ 
+.customer-menu-link {
+  display: contents;
+}
+ 
+.customer-menu-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.customer-menu-icon1 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.customer-menu-text {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

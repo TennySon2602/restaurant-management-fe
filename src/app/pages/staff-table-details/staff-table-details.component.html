@@ -1,0 +1,213 @@
+<div class="staff-table-details-container1">
+  <div class="staff-table-details-thq-staff-table-details-elm">
+    <div class="staff-table-details-thq-staff-layout-elm1">
+      <div class="staff-table-details-thq-header-elm">
+        <div class="staff-table-details-thq-container-elm10">
+          <div class="staff-table-details-thq-container-elm11">
+            <div class="staff-table-details-thq-heading2-elm">
+              <span class="staff-table-details-thq-text-elm10">
+                Staff POS System
+              </span>
+            </div>
+            <div class="staff-table-details-thq-paragraph-elm10">
+              <span class="staff-table-details-thq-text-elm11">
+                Table &amp; Order Management
+              </span>
+            </div>
+          </div>
+          <button class="staff-table-details-thq-button-elm10" (click)="logout()">
+            <img
+              src="/assets/icon4564-fly.svg"
+              alt="Icon4564"
+              class="staff-table-details-thq-icon-elm10"
+            />
+            <div class="staff-table-details-thq-text-elm12">
+              <span class="staff-table-details-thq-text-elm13">Logout</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="staff-table-details-thq-staff-tables-elm">
+        <div class="staff-table-details-thq-container-elm12">
+          <div class="staff-table-details-thq-container-elm13">
+            <div class="staff-table-details-thq-heading3-elm1">
+              <span class="staff-table-details-thq-text-elm14">Menu</span>
+            </div>
+            <div class="staff-table-details-thq-paragraph-elm11">
+              <span class="staff-table-details-thq-text-elm15">
+                Select Category
+              </span>
+            </div>
+          </div>
+          <div class="staff-table-details-thq-container-elm14">
+            <button
+              *ngFor="let cat of categories"
+              [class]="activeCategory === cat ? 'staff-table-details-thq-button-elm11' : 'staff-table-details-thq-button-elm12'"
+              (click)="filterCategory(cat)"
+            >
+              <span [class]="activeCategory === cat ? 'staff-table-details-thq-text-elm16' : 'staff-table-details-thq-text-elm17'">{{ cat }}</span>
+            </button>
+          </div>
+          <button class="staff-table-details-thq-button-elm15" (click)="backToTables()">
+            <span class="staff-table-details-thq-text-elm20">
+              ← Back to Tables
+            </span>
+          </button>
+        </div>
+        <div class="staff-table-details-thq-container-elm15">
+          <div class="staff-table-details-thq-container-elm16">
+            <div class="staff-table-details-thq-heading3-elm2">
+              <span class="staff-table-details-thq-text-elm21">{{ activeCategory }}</span>
+            </div>
+            <div class="staff-table-details-thq-container-elm17">
+              <span class="staff-table-details-thq-text-elm22">{{ categoryItemCount }} Items</span>
+            </div>
+          </div>
+          <div class="staff-table-details-thq-container-elm18">
+            <button
+              *ngFor="let item of filteredMenuItems"
+              class="staff-table-details-thq-button-elm16"
+              (click)="addToOrder(item)"
+              style="cursor:pointer"
+            >
+              <div class="staff-table-details-thq-container-elm19">
+                <span style="font-size:20px;">🍽️</span>
+              </div>
+              <div class="staff-table-details-thq-paragraph-elm12">
+                <span class="staff-table-details-thq-text-elm23">
+                  {{ item.name }}
+                </span>
+              </div>
+              <div class="staff-table-details-thq-paragraph-elm13">
+                <span class="staff-table-details-thq-text-elm24">${{ item.price }}</span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="staff-table-details-thq-container-elm22">
+          <div class="staff-table-details-thq-container-elm23">
+            <div class="staff-table-details-thq-container-elm24">
+              <div class="staff-table-details-thq-container-elm25">
+                <div class="staff-table-details-thq-heading3-elm3">
+                  <span class="staff-table-details-thq-text-elm29">{{ tableId }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="staff-table-details-thq-container-elm26">
+              <div class="staff-table-details-thq-container-elm27">
+                <div class="staff-table-details-thq-container-elm29">
+                  <span class="staff-table-details-thq-text-elm30">
+                    Order for {{ tableId }}
+                  </span>
+                </div>
+              </div>
+              <div class="staff-table-details-thq-container-elm30">
+                <span class="staff-table-details-thq-text-elm31">{{ orderTime }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="staff-table-details-thq-container-elm31">
+            <div class="staff-table-details-thq-container-elm32" *ngFor="let orderItem of order.items">
+              <div class="staff-table-details-thq-container-elm33">
+                <div class="staff-table-details-thq-container-elm34">
+                  <div class="staff-table-details-thq-paragraph-elm18">
+                    <span class="staff-table-details-thq-text-elm32">
+                      {{ orderItem.name }}
+                    </span>
+                  </div>
+                  <div class="staff-table-details-thq-paragraph-elm19">
+                    <span class="staff-table-details-thq-text-elm33">
+                      ${{ orderItem.price }} each
+                    </span>
+                  </div>
+                </div>
+                <div class="staff-table-details-thq-paragraph-elm20">
+                  <span class="staff-table-details-thq-text-elm34">${{ (orderItem.price * orderItem.quantity).toFixed(2) }}</span>
+                </div>
+              </div>
+              <div class="staff-table-details-thq-container-elm35">
+                <div class="staff-table-details-thq-container-elm36">
+                  <button class="staff-table-details-thq-button-elm19" (click)="decreaseQty(orderItem)" style="cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;border-radius:6px;background:#fff;font-size:16px;">
+                    −
+                  </button>
+                  <div class="staff-table-details-thq-text-elm35" style="min-width:24px;text-align:center;font-family:Inter;font-size:14px;font-weight:600;">{{ orderItem.quantity }}</div>
+                  <button class="staff-table-details-thq-button-elm20" (click)="increaseQty(orderItem)" style="cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;border-radius:6px;background:#fff;font-size:16px;">
+                    +
+                  </button>
+                </div>
+                <button class="staff-table-details-thq-button-elm21" (click)="removeFromOrder(orderItem)" style="cursor:pointer">
+                  <span class="staff-table-details-thq-text-elm36">Remove</span>
+                </button>
+              </div>
+            </div>
+            <div *ngIf="order.items.length === 0" style="padding:20px;text-align:center;color:#99a1af;font-family:Inter;font-size:14px;">
+              No items in order. Click a menu item to add.
+            </div>
+          </div>
+          <div class="staff-table-details-thq-container-elm37">
+            <div class="staff-table-details-thq-container-elm38">
+              <div class="staff-table-details-thq-container-elm39">
+                <div class="staff-table-details-thq-text-elm37">
+                  <span class="staff-table-details-thq-text-elm38">
+                    Subtotal
+                  </span>
+                </div>
+                <div class="staff-table-details-thq-text-elm39">
+                  <span class="staff-table-details-thq-text-elm40">${{ subtotal.toFixed(2) }}</span>
+                </div>
+              </div>
+              <div class="staff-table-details-thq-container-elm40">
+                <div class="staff-table-details-thq-text-elm41">
+                  <span class="staff-table-details-thq-text-elm42">
+                    Tax (10%)
+                  </span>
+                </div>
+                <div class="staff-table-details-thq-text-elm43">
+                  <span class="staff-table-details-thq-text-elm44">${{ tax.toFixed(2) }}</span>
+                </div>
+              </div>
+              <div class="staff-table-details-thq-container-elm41">
+                <div class="staff-table-details-thq-text-elm45">
+                  <span class="staff-table-details-thq-text-elm46">Total</span>
+                </div>
+                <div class="staff-table-details-thq-text-elm47">
+                  <span class="staff-table-details-thq-text-elm48">${{ total.toFixed(2) }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="staff-table-details-thq-container-elm42">
+              <button class="staff-table-details-thq-button-elm22" (click)="sendOrder()">
+                <span class="staff-table-details-thq-text-elm49">Send</span>
+              </button>
+              <button class="staff-table-details-thq-button-elm23" (click)="checkout()">
+                <span class="staff-table-details-thq-text-elm50">Checkout</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="staff-table-details-thq-staff-layout-elm2">
+      <div class="staff-table-details-thq-link-elm1" (click)="navigateTo('/staff-tables')" style="cursor:pointer">
+        <img src="/assets/icon4577-sfb.svg" alt="Icon4577" class="staff-table-details-thq-icon-elm20" />
+        <div class="staff-table-details-thq-staff-layout-elm3">
+          <span class="staff-table-details-thq-text-elm51">Tables</span>
+        </div>
+      </div>
+      <div class="staff-table-details-thq-link-elm2" (click)="navigateTo('/staff-payment-history')" style="cursor:pointer">
+        <img src="/assets/icon4578-133.svg" alt="Icon4578" class="staff-table-details-thq-icon-elm21" />
+        <div class="staff-table-details-thq-staff-layout-elm4">
+          <span class="staff-table-details-thq-text-elm52">
+            Payments History
+          </span>
+        </div>
+      </div>
+      <div class="staff-table-details-thq-link-elm3" (click)="navigateTo('/staff-shift')" style="cursor:pointer">
+        <img src="/assets/icon4579-jc9.svg" alt="Icon4579" class="staff-table-details-thq-icon-elm22" />
+        <div class="staff-table-details-thq-staff-layout-elm5">
+          <span class="staff-table-details-thq-text-elm53">Shift</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

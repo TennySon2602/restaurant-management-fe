@@ -1,0 +1,2840 @@
+:host { 
+  display: contents; 
+}
+ 
+.staff-payment-history-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.staff-payment-history-thq-staff-payment-history-elm {
+  width: 100%;
+  height: 1003px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.staff-payment-history-thq-staff-layout-elm1 {
+  gap: 58.40000915527344px;
+  top: 0px;
+  left: 0px;
+  width: 1112px;
+  height: 658.4000244140625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.staff-payment-history-thq-header-elm {
+  width: 1112px;
+  height: 86px;
+  display: flex;
+  padding: 16px 16px 0;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-container-elm10 {
+  gap: 800px;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+ 
+.staff-payment-history-thq-container-elm11 {
+  gap: 4px;
+  width: 176px;
+  height: 54px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.staff-payment-history-thq-heading2-elm1 {
+  width: 176px;
+  height: 30px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.staff-payment-history-thq-text-elm10 {
+  top: -2.1999988555908203px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 30px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-paragraph-elm1 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm11 {
+  color: rgba(255, 255, 255, 0.699999988079071);
+  height: auto;
+  font-size: 14px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-button-elm10 {
+  gap: 8px;
+  width: 104px;
+  height: 36px;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.10000000149011612);
+}
+ 
+.staff-payment-history-thq-icon-elm10 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm12 {
+  height: 20px;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm13 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-staff-payments-elm {
+  width: 1112px;
+  height: 858.7999877929688px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.staff-payment-history-thq-container-elm12 {
+  top: 24px;
+  left: 24px;
+  width: 1064px;
+  height: 103px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm13 {
+  top: 0px;
+  left: 0px;
+  width: 701px;
+  height: 103px;
+  display: flex;
+  padding: 0 427.7250061035156px 0 0;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+ 
+.staff-payment-history-thq-container-elm14 {
+  gap: 4px;
+  width: 273.6000061035156px;
+  height: 55.98749923706055px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.staff-payment-history-thq-heading2-elm2 {
+  width: 273.6000061035156px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.staff-payment-history-thq-text-elm14 {
+  top: -2.4000091552734375px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 36px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-paragraph-elm2 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm15 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-container-elm15 {
+  top: 0px;
+  left: 725.3250122070312px;
+  width: 339px;
+  height: 103px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-container-elm16 {
+  gap: 4px;
+  top: 24px;
+  left: 24px;
+  width: 130px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.staff-payment-history-thq-paragraph-elm3 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm16 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-paragraph-elm4 {
+  width: 130.1999969482422px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.staff-payment-history-thq-text-elm17 {
+  top: -2.4000091552734375px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 36px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-container-elm17 {
+  top: 27.5px;
+  left: 266.67498779296875px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  padding: 12px 12px 0;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 16px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.10000000149011612);
+}
+ 
+.staff-payment-history-thq-icon-elm11 {
+  width: 24px;
+  height: 24px;
+  align-self: stretch;
+}
+ 
+.staff-payment-history-thq-container-elm18 {
+  top: 0px;
+  left: 242.67498779296875px;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 0 0 0 64px;
+  background-color: rgba(255, 107, 53, 0.20000000298023224);
+}
+ 
+.staff-payment-history-thq-container-elm19 {
+  top: 158.99998474121094px;
+  left: 24px;
+  width: 1064px;
+  height: 53.60000228881836px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm20 {
+  gap: 8.000007629394531px;
+  top: 0px;
+  left: 539.6000366210938px;
+  width: 387px;
+  height: 53.60000228881836px;
+  display: flex;
+  padding: 8.000018119812012px 0 0 7.999987602233887px;
+  position: absolute;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.staff-payment-history-thq-button-elm11 {
+  width: 73.20000457763672px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  box-shadow: 0px 10px 15px -3px rgba(255, 237, 212, 1) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.staff-payment-history-thq-text-elm18 {
+  top: 10px;
+  left: 24px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-button-elm12 {
+  width: 85.5999984741211px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+ 
+.staff-payment-history-thq-text-elm19 {
+  top: 10px;
+  left: 24px;
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-button-elm13 {
+  width: 85.5999984741211px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+ 
+.staff-payment-history-thq-text-elm20 {
+  top: 10px;
+  left: 24px;
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-button-elm14 {
+  width: 100.80000305175781px;
+  height: 36px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+ 
+.staff-payment-history-thq-text-elm21 {
+  top: 10px;
+  left: 24px;
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-button-elm15 {
+  top: 0px;
+  left: 942.4000244140625px;
+  width: 122px;
+  height: 53.60000228881836px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm12 {
+  top: 16.800018310546875px;
+  left: 24px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-text-elm22 {
+  top: 15.800018310546875px;
+  left: 52px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-container-elm21 {
+  top: 0px;
+  left: 0px;
+  width: 524px;
+  height: 53.60000228881836px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-input-elm {
+  top: 0px;
+  left: 0px;
+  color: rgba(45, 45, 45, 0.5);
+  width: 524px;
+  height: 53.60000228881836px;
+  display: flex;
+  padding: 16px 16px 16px 48px;
+  overflow: hidden;
+  position: absolute;
+  font-size: 14px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+  text-align: left;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: Inter;
+  font-weight: 700;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm13 {
+  top: 16.800018310546875px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-container-elm22 {
+  top: 236.59999084472656px;
+  left: 24px;
+  width: 1064px;
+  height: 598.2000122070312px;
+  display: flex;
+  padding: 0.800018310546875px 0.7999744415283203px 0.800000011920929px 0.8000011444091797px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 40px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.staff-payment-history-thq-table-elm {
+  width: 1062.4000244140625px;
+  height: 596.6000366210938px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.staff-payment-history-thq-table-header-elm {
+  top: 0px;
+  left: 0px;
+  width: 1062px;
+  height: 63.400001525878906px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-row-elm1 {
+  top: 0px;
+  left: 0px;
+  width: 1062px;
+  height: 63.400001525878906px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(249, 250, 251, 0.5);
+}
+ 
+.staff-payment-history-thq-header-cell-elm1 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm23 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm2 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm24 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm3 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm25 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm4 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm26 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm5 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm27 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm6 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm28 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-header-cell-elm7 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 63.400001525878906px;
+  display: flex;
+  padding: 24px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm29 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-body-elm {
+  top: 63.399993896484375px;
+  left: 0px;
+  width: 1062px;
+  height: 532.7999877929688px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-row-elm2 {
+  top: 0px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm10 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm23 {
+  gap: 12.000003814697266px;
+  top: 24.399993896484375px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm24 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm14 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm30 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm31 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm11 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm25 {
+  top: 24.399993896484375px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm32 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm12 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm33 {
+  top: 30.199981689453125px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm13 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm26 {
+  gap: 8px;
+  top: 36.399993896484375px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm15 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm34 {
+  width: 32.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm35 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm14 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm36 {
+  top: 36.399993896484375px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm15 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm37 {
+  top: 36.399993896484375px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm16 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm16 {
+  top: 25.600006103515625px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm16 {
+  top: 8.79998779296875px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-table-row-elm3 {
+  top: 88.79998779296875px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm17 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm27 {
+  gap: 12.000003814697266px;
+  top: 24.4000244140625px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm28 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm17 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm38 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm39 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm18 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm29 {
+  top: 24.4000244140625px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm40 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm19 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm41 {
+  top: 30.20001220703125px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm20 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm30 {
+  gap: 8px;
+  top: 36.4000244140625px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm18 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm42 {
+  width: 31.200000762939453px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm43 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm21 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm44 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm22 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm45 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm23 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm17 {
+  top: 25.60003662109375px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm19 {
+  top: 8.79998779296875px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-table-row-elm4 {
+  top: 177.5999755859375px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm24 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm31 {
+  gap: 12.000003814697266px;
+  top: 24.4000244140625px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm32 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm20 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm46 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm47 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm25 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm33 {
+  top: 24.4000244140625px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm48 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm26 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm49 {
+  top: 30.20001220703125px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm27 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm34 {
+  gap: 8px;
+  top: 36.4000244140625px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm21 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm50 {
+  width: 44.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm51 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm28 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm52 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm29 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm53 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm30 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm18 {
+  top: 25.60003662109375px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm22 {
+  top: 8.79998779296875px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-table-row-elm5 {
+  top: 266.4000244140625px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm31 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm35 {
+  gap: 12.000003814697266px;
+  top: 24.39996337890625px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm36 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm23 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm54 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm55 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm32 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm37 {
+  top: 24.39996337890625px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm56 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm33 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm57 {
+  top: 30.199951171875px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm34 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm38 {
+  gap: 8px;
+  top: 36.39996337890625px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm24 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm58 {
+  width: 32.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm59 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm35 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm60 {
+  top: 36.39996337890625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm36 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm61 {
+  top: 36.39996337890625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm37 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm19 {
+  top: 25.5999755859375px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm25 {
+  top: 8.79998779296875px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-table-row-elm6 {
+  top: 355.20001220703125px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm38 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm39 {
+  gap: 12.000003814697266px;
+  top: 24.39996337890625px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm40 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm26 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm62 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm63 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm39 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm41 {
+  top: 24.39996337890625px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm64 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm40 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm65 {
+  top: 30.20001220703125px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm41 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm42 {
+  gap: 8px;
+  top: 36.39996337890625px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm27 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm66 {
+  width: 32.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm67 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm42 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm68 {
+  top: 36.39996337890625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm43 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm69 {
+  top: 36.39996337890625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm44 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm20 {
+  top: 25.5999755859375px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm28 {
+  top: 8.79998779296875px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-table-row-elm7 {
+  top: 444px;
+  left: 0px;
+  width: 1062px;
+  height: 88.80000305175781px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-table-cell-elm45 {
+  top: 0px;
+  left: 0px;
+  width: 247px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm43 {
+  gap: 12.000003814697266px;
+  top: 24.4000244140625px;
+  left: 23.999998092651367px;
+  width: 199px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-container-elm44 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.staff-payment-history-thq-icon-elm29 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-text-elm70 {
+  width: 85.5999984741211px;
+  height: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm71 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm46 {
+  top: 0px;
+  left: 246.59999084472656px;
+  width: 117px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm45 {
+  top: 24.4000244140625px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.staff-payment-history-thq-text-elm72 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm47 {
+  top: 0px;
+  left: 363.51251220703125px;
+  width: 145px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm73 {
+  top: 30.20001220703125px;
+  left: 24px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm48 {
+  top: 0px;
+  left: 508.0625px;
+  width: 155px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-container-elm46 {
+  gap: 8px;
+  top: 36.4000244140625px;
+  left: 24px;
+  width: 107px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-icon-elm30 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.staff-payment-history-thq-text-elm74 {
+  width: 31.200000762939453px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm75 {
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm49 {
+  top: 0px;
+  left: 663.25px;
+  width: 135px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm76 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm50 {
+  top: 0px;
+  left: 798.237548828125px;
+  width: 137px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-text-elm77 {
+  top: 36.4000244140625px;
+  left: 24px;
+  color: rgba(106, 114, 130, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-table-cell-elm51 {
+  top: 0px;
+  left: 935.3500366210938px;
+  width: 127px;
+  height: 88.80000305175781px;
+  display: flex;
+  padding: 0 0 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(249, 250, 251, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+}
+ 
+.staff-payment-history-thq-button-elm21 {
+  top: 25.5999755859375px;
+  left: 24px;
+  width: 38px;
+  height: 37.60000228881836px;
+  display: flex;
+  padding: 0.800000011920929px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.800000011920929px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.000009999999747378752);
+}
+ 
+.staff-payment-history-thq-icon-elm31 {
+  top: 8.800048828125px;
+  left: 8.79998779296875px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+ 
+.staff-payment-history-thq-staff-layout-elm2 {
+  top: 86px;
+  left: 0px;
+  width: 1112px;
+  height: 57.60000228881836px;
+  display: flex;
+  padding: 0 0.012481689453125px 0 0;
+  position: absolute;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.staff-payment-history-thq-link-elm1 {
+  gap: 8px;
+  height: 57.60000228881836px;
+  display: flex;
+  padding: 0 150.13751220703125px 0 150.125px;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0 0 1.600000023841858px;
+  justify-content: center;
+}
+ 
+.staff-payment-history-thq-icon-elm32 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-staff-layout-elm3 {
+  width: 42.400001525878906px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm78 {
+  top: -2.1999969482421875px;
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-link-elm2 {
+  gap: 8px;
+  height: 57.60000228881836px;
+  display: flex;
+  padding: 0 110.93751525878906px 0 110.92498779296875px;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(255, 107, 53, 1);
+  border-style: solid;
+  border-width: 0 0 1.600000023841858px;
+  justify-content: center;
+}
+ 
+.staff-payment-history-thq-icon-elm33 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-staff-layout-elm4 {
+  width: 120.80000305175781px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm79 {
+  top: -2.1999969482421875px;
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-thq-link-elm3 {
+  gap: 8px;
+  height: 57.60000228881836px;
+  display: flex;
+  padding: 0 155.33749389648438px 0 155.32501220703125px;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0 0 1.600000023841858px;
+  justify-content: center;
+}
+ 
+.staff-payment-history-thq-icon-elm34 {
+  width: 20px;
+  height: 20px;
+}
+ 
+.staff-payment-history-thq-staff-layout-elm5 {
+  width: 32px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.staff-payment-history-thq-text-elm80 {
+  top: -2.1999969482421875px;
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.staff-payment-history-link {
+  display: contents;
+}
+ 
+.staff-payment-history-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.staff-payment-history-icon1 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.staff-payment-history-text {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

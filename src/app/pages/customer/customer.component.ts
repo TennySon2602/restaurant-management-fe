@@ -29,6 +29,11 @@ export class CustomerComponent implements OnInit {
   
   showSuccess = false;
   errorMessage = '';
+  
+  // History
+  myReservations: Reservation[] = [];
+  showHistory = false;
+  searchPhone = '';
 
   constructor(
     private authService: AuthService,
@@ -44,6 +49,89 @@ export class CustomerComponent implements OnInit {
     // Set minimum date to today
     const today = new Date();
     this.date = today.toISOString().split('T')[0];
+    
+    // Subscribe to reservations for history
+    this.dataService.reservations$.subscribe(reservations => {
+      this.updateMyReservations(reservations);
+    });
+  }
+  
+  // History methods
+  toggleHistory(): void {
+    this.showHistory = !this.showHistory;
+  }
+  
+  searchHistory(): void {
+    if (!this.searchPhone || this.searchPhone.trim().length < 10) {
+      this.errorMessage = 'Vui lòng nhập số điện thoại hợp lệ (10 số)';
+      return;
+    }
+    
+    this.dataService.reservations$.subscribe(reservations => {
+      this.myReservations = reservations.filter(
+        r => r.customerPhone === this.searchPhone.trim()
+      ).sort((a, b) => {
+        // Sort by date desc, then time desc
+        if (a.date !== b.date) {
+          return b.date.localeCompare(a.date);
+        }
+        return b.time.localeCompare(a.time);
+      });
+    });
+  }
+  
+  updateMyReservations(allReservations: Reservation[]): void {
+    if (this.customerPhone) {
+      this.myReservations = allReservations.filter(
+        r => r.customerPhone === this.customerPhone
+      ).sort((a, b) => {
+        if (a.date !== b.date) {
+          return b.date.localeCompare(a.date);
+        }
+        return b.time.localeCompare(a.time);
+      });
+    }
+  }
+  
+  cancelReservation(reservation: Reservation): void {
+    if (reservation.status === 'pending' || reservation.status === 'confirmed') {
+      if (confirm(`Bạn có chắc muốn hủy đặt bàn vào ${reservation.date} lúc ${reservation.time}?`)) {
+        this.dataService.updateReservation({
+          ...reservation,
+          status: 'cancelled'
+        });
+        
+        // Free up tables
+        reservation.tableIds.forEach(tableId => {
+          const table = this.tables.find(t => t.id === tableId);
+          if (table && table.status === 'reserved') {
+            this.dataService.updateTable({
+              ...table,
+              status: 'available'
+            });
+          }
+        });
+      }
+    }
+  }
+  
+  getStatusText(status: string): string {
+    const statusMap: {[key: string]: string} = {
+      'pending': 'Chờ xác nhận',
+      'confirmed': 'Đã xác nhận',
+      'seated': 'Đang phục vụ',
+      'completed': 'Hoàn thành',
+      'cancelled': 'Đã hủy'
+    };
+    return statusMap[status] || status;
+  }
+  
+  getStatusClass(status: string): string {
+    return `status-${status}`;
+  }
+  
+  canCancel(reservation: Reservation): boolean {
+    return reservation.status === 'pending' || reservation.status === 'confirmed';
   }
 
   toggleTableSelection(tableId: string): void {

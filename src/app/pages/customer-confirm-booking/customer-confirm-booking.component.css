@@ -1,0 +1,869 @@
+:host { 
+  display: contents; 
+}
+ 
+.customer-confirm-booking-container1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-customer-confirm-booking-elm {
+  width: 100%;
+  height: 1145px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm1 {
+  top: 0px;
+  left: 0px;
+  width: 1112px;
+  height: 658.4000244140625px;
+  display: flex;
+  padding: 60.79999923706055px 0 0 300px;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.customer-confirm-booking-thq-customer-reservations-elm1 {
+  width: 512px;
+  height: 1004.2750244140625px;
+  display: flex;
+  padding: 96.80000305175781px 24px 0;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: rgba(245, 245, 245, 1);
+}
+ 
+.customer-confirm-booking-thq-container-elm10 {
+  width: 464px;
+  height: 787.4750366210938px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: stretch;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25) ;
+  align-items: flex-start;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-confirm-booking-thq-container-elm11 {
+  top: 40px;
+  left: 184px;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  padding: 0 28px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 26843500px;
+  justify-content: center;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.customer-confirm-booking-thq-icon-elm10 {
+  width: 40px;
+  height: 40px;
+}
+ 
+.customer-confirm-booking-thq-heading3-elm {
+  top: 168px;
+  left: 40px;
+  width: 384px;
+  height: 36px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm10 {
+  top: -2.399993896484375px;
+  left: 98px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 36px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm10 {
+  top: 212px;
+  left: 40px;
+  width: 384px;
+  height: 15.987500190734863px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm11 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 12px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-container-elm12 {
+  gap: 16.000030517578125px;
+  top: 267.98748779296875px;
+  left: 40px;
+  width: 384px;
+  height: 244.9875030517578px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-container-elm13 {
+  gap: 202.39999389648438px;
+  display: flex;
+  padding: 0 24px;
+  align-self: stretch;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 24px;
+  justify-content: space-between;
+  background-color: rgba(249, 250, 251, 1);
+}
+ 
+.customer-confirm-booking-thq-container-elm14 {
+  width: 101.5999984741211px;
+  height: 67px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm11 {
+  top: 0px;
+  left: 0px;
+  width: 102px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm12 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm12 {
+  top: 19px;
+  left: 0px;
+  width: 102px;
+  height: 28px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm13 {
+  top: -1.399993896484375px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 28px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm13 {
+  top: 47px;
+  left: 0px;
+  width: 102px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm14 {
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-icon-elm11 {
+  width: 32px;
+  height: 32px;
+}
+ 
+.customer-confirm-booking-thq-container-elm15 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-container-elm16 {
+  width: 184px;
+  height: 113.98750305175781px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background-color: rgba(249, 250, 251, 1);
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm14 {
+  top: 24px;
+  left: 24px;
+  width: 136px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm15 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm15 {
+  top: 43px;
+  left: 24px;
+  width: 136px;
+  height: 28px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm16 {
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 20px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 28px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm16 {
+  top: 71px;
+  left: 24px;
+  width: 136px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm17 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-container-elm17 {
+  width: 184px;
+  height: 113.98750305175781px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background-color: rgba(249, 250, 251, 1);
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm17 {
+  top: 24px;
+  left: 24px;
+  width: 136px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm18 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm18 {
+  top: 43px;
+  left: 24px;
+  width: 136px;
+  height: 31.98750114440918px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm19 {
+  top: 74.98748779296875px;
+  left: 24px;
+  width: 136px;
+  height: 15px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm19 {
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 10px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 15px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-container-elm18 {
+  top: 552.9749755859375px;
+  left: 40px;
+  width: 384px;
+  height: 86.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background-color: rgba(255, 247, 237, 1);
+}
+ 
+.customer-confirm-booking-thq-icon-elm12 {
+  top: 28px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+ 
+.customer-confirm-booking-thq-paragraph-elm20 {
+  top: 24px;
+  left: 64px;
+  width: 214px;
+  height: 38.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm20 {
+  top: -1.79998779296875px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 19.25px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-text-elm21 {
+  top: 20.6500244140625px;
+  color: rgba(153, 161, 175, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-button-elm1 {
+  top: 679.4749755859375px;
+  left: 40px;
+  width: 384px;
+  height: 68px;
+  display: flex;
+  padding: 24px 0;
+  position: absolute;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background-color: rgba(45, 45, 45, 1);
+}
+ 
+.customer-confirm-booking-thq-text-elm22 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  flex-grow: 1;
+  font-size: 14px;
+  font-style: Black;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 20px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-container-elm19 {
+  top: 0px;
+  left: 0px;
+  width: 464px;
+  height: 8px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm2 {
+  top: 1076px;
+  left: 0px;
+  width: 1112px;
+  height: 68.7874984741211px;
+  display: flex;
+  padding: 0.800048828125px 300px 0;
+  position: absolute;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10000000149011612) ;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 0.800000011920929px 0 0;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-confirm-booking-thq-container-elm20 {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-link-elm1 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm13 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm3 {
+  width: 32.79999923706055px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm23 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-link-elm2 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm14 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm4 {
+  width: 29.600000381469727px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm24 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-link-elm3 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm15 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm5 {
+  width: 66.4000015258789px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm25 {
+  color: rgba(255, 107, 53, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-link-elm4 {
+  gap: 4px;
+  width: 128px;
+  display: flex;
+  padding: 12px 0 0;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm16 {
+  width: 24px;
+  height: 24px;
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm6 {
+  width: 34.400001525878906px;
+  height: 15.987500190734863px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm26 {
+  color: rgba(113, 113, 113, 1);
+  height: auto;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 16px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-customer-layout-elm7 {
+  gap: 946px;
+  top: 0px;
+  left: 0px;
+  width: 1112px;
+  height: 60.79999923706055px;
+  display: flex;
+  padding: 0 16px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-confirm-booking-thq-container-elm21 {
+  gap: 8px;
+  width: 98px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-container-elm22 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  padding: 0 8px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: rgba(255, 107, 53, 1);
+}
+ 
+.customer-confirm-booking-thq-icon-elm17 {
+  width: 16px;
+  height: 16px;
+}
+ 
+.customer-confirm-booking-thq-text-elm27 {
+  width: 58px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm28 {
+  top: -2.1999988555908203px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 24px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-thq-button-elm2 {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  padding: 8px 8px 0;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm18 {
+  width: 20px;
+  height: 20px;
+  align-self: stretch;
+}
+ 
+.customer-confirm-booking-thq-customer-reservations-elm2 {
+  gap: 126.39999389648438px;
+  top: 60.79999923706055px;
+  left: 300px;
+  width: 512px;
+  height: 72.80000305175781px;
+  display: flex;
+  padding: 0 182.40000915527344px 0 8px;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(243, 244, 246, 1);
+  border-style: solid;
+  border-width: 0 0 0.800000011920929px;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+}
+ 
+.customer-confirm-booking-thq-button-elm3 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 8px 8px 0;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+ 
+.customer-confirm-booking-thq-icon-elm19 {
+  width: 24px;
+  height: 24px;
+  align-self: stretch;
+}
+ 
+.customer-confirm-booking-thq-heading2-elm {
+  width: 155.1999969482422px;
+  height: 28px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+ 
+.customer-confirm-booking-thq-text-elm29 {
+  top: -1.4000015258789062px;
+  color: rgba(45, 45, 45, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Black;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 900;
+  line-height: 28px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.customer-confirm-booking-link {
+  display: contents;
+}
+ 
+.customer-confirm-booking-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.customer-confirm-booking-icon1 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.customer-confirm-booking-text {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

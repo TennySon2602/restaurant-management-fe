@@ -1,0 +1,228 @@
+<div class="manager-menu-container1">
+  <div class="manager-menu-thq-manager-menu-elm1">
+    <div class="manager-menu-thq-manager-layout-elm1">
+      <div class="manager-menu-thq-header-elm">
+        <div class="manager-menu-thq-container-elm10">
+          <div class="manager-menu-thq-container-elm11">
+            <div class="manager-menu-thq-heading2-elm">
+              <span class="manager-menu-thq-text-elm10">Manager Dashboard</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm10">
+              <span class="manager-menu-thq-text-elm11">
+                Restaurant Operations &amp; Analytics
+              </span>
+            </div>
+          </div>
+          <button class="manager-menu-thq-button-elm10" (click)="logout()">
+            <img
+              src="/assets/icon3518-vpyk.svg"
+              alt="Icon3518"
+              class="manager-menu-thq-icon-elm10"
+            />
+            <div class="manager-menu-thq-text-elm12">
+              <span class="manager-menu-thq-text-elm13">Logout</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="manager-menu-thq-manager-menu-elm2">
+        <div class="manager-menu-thq-container-elm12">
+          <div class="manager-menu-thq-container-elm13">
+            <div class="manager-menu-thq-heading3-elm">
+              <span class="manager-menu-thq-text-elm14">Menu Management</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm11">
+              <span class="manager-menu-thq-text-elm15">
+                Manage menu items and categories
+              </span>
+            </div>
+          </div>
+          <button class="manager-menu-thq-button-elm11" (click)="openAddModal()">
+            <img
+              src="/assets/icon3518-r52.svg"
+              alt="Icon3518"
+              class="manager-menu-thq-icon-elm11"
+            />
+            <span class="manager-menu-thq-text-elm16">Add Dish</span>
+          </button>
+        </div>
+        <div class="manager-menu-thq-container-elm14">
+          <div class="manager-menu-thq-container-elm15">
+            <button
+              *ngFor="let cat of categories"
+              [class]="activeCategory === cat ? 'manager-menu-thq-button-elm12' : 'manager-menu-thq-button-elm13'"
+              (click)="filterByCategory(cat)"
+            >
+              <span [class]="activeCategory === cat ? 'manager-menu-thq-text-elm17' : 'manager-menu-thq-text-elm18'">{{ cat }}</span>
+            </button>
+          </div>
+        </div>
+        <div class="manager-menu-thq-container-elm16">
+          <div class="manager-menu-thq-table-elm" style="overflow-x: auto;">
+            <div class="manager-menu-thq-table-header-elm">
+              <div class="manager-menu-thq-table-row-elm1">
+                <div class="manager-menu-thq-header-cell-elm1">
+                  <span class="manager-menu-thq-text-elm22">Name</span>
+                </div>
+                <div class="manager-menu-thq-header-cell-elm2">
+                  <span class="manager-menu-thq-text-elm23">Category</span>
+                </div>
+                <div class="manager-menu-thq-header-cell-elm3">
+                  <span class="manager-menu-thq-text-elm24">Price</span>
+                </div>
+                <div class="manager-menu-thq-header-cell-elm4">
+                  <span class="manager-menu-thq-text-elm25">Status</span>
+                </div>
+                <div class="manager-menu-thq-header-cell-elm5">
+                  <span class="manager-menu-thq-text-elm26">Actions</span>
+                </div>
+              </div>
+            </div>
+            <div class="manager-menu-thq-table-body-elm">
+              <div class="manager-menu-thq-table-row-elm2" *ngFor="let item of filteredItems">
+                <div class="manager-menu-thq-table-cell-elm10">
+                  <span class="manager-menu-thq-text-elm27">{{ item.name }}</span>
+                </div>
+                <div class="manager-menu-thq-table-cell-elm11">
+                  <div class="manager-menu-thq-text-elm28">
+                    <span class="manager-menu-thq-text-elm29">{{ item.category }}</span>
+                  </div>
+                </div>
+                <div class="manager-menu-thq-table-cell-elm12">
+                  <span class="manager-menu-thq-text-elm30">${{ item.price }}</span>
+                </div>
+                <div class="manager-menu-thq-table-cell-elm13">
+                  <button
+                    [class]="item.status === 'Available' ? 'manager-menu-thq-button-elm17' : 'manager-menu-thq-button-elm26'"
+                    (click)="toggleStatus(item)"
+                  >
+                    <div [class]="item.status === 'Available' ? 'manager-menu-thq-text-elm31' : 'manager-menu-thq-text-elm49'">
+                      <span [class]="item.status === 'Available' ? 'manager-menu-thq-text-elm32' : 'manager-menu-thq-text-elm50'">
+                        {{ item.status }}
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="manager-menu-thq-table-cell-elm14">
+                  <div class="manager-menu-thq-container-elm17">
+                    <button class="manager-menu-thq-button-elm18" (click)="openEditModal(item)" title="Edit">
+                      <span style="font-size:14px;">✏️</span>
+                    </button>
+                    <button class="manager-menu-thq-button-elm19" (click)="deleteDish(item)" title="Delete">
+                      <span style="font-size:14px;">🗑️</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="manager-menu-thq-container-elm24">
+          <div class="manager-menu-thq-container-elm25">
+            <div class="manager-menu-thq-paragraph-elm12">
+              <span class="manager-menu-thq-text-elm69">Total Items</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm13">
+              <span class="manager-menu-thq-text-elm69">{{ totalItems }}</span>
+            </div>
+          </div>
+          <div class="manager-menu-thq-container-elm26">
+            <div class="manager-menu-thq-paragraph-elm14">
+              <span class="manager-menu-thq-text-elm70">Available</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm15">
+              <span class="manager-menu-thq-text-elm70">{{ availableCount }}</span>
+            </div>
+          </div>
+          <div class="manager-menu-thq-container-elm27">
+            <div class="manager-menu-thq-paragraph-elm16">
+              <span class="manager-menu-thq-text-elm71">Unavailable</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm17">
+              <span class="manager-menu-thq-text-elm71">{{ unavailableCount }}</span>
+            </div>
+          </div>
+          <div class="manager-menu-thq-container-elm28">
+            <div class="manager-menu-thq-paragraph-elm18">
+              <span class="manager-menu-thq-text-elm72">Categories</span>
+            </div>
+            <div class="manager-menu-thq-paragraph-elm19">
+              <span class="manager-menu-thq-text-elm72">{{ categoryCount }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="manager-menu-thq-manager-layout-elm2">
+      <div class="manager-menu-thq-link-elm1" (click)="navigateTo('/manager-dashboard')" style="cursor:pointer">
+        <img src="/assets/icon3520-qllz.svg" alt="Icon3520" class="manager-menu-thq-icon-elm33" />
+        <div class="manager-menu-thq-manager-layout-elm3">
+          <span class="manager-menu-thq-text-elm73">Dashboard</span>
+        </div>
+      </div>
+      <div class="manager-menu-thq-link-elm2" (click)="navigateTo('/manager-menu')" style="cursor:pointer">
+        <img src="/assets/icon3520-4i3c.svg" alt="Icon3520" class="manager-menu-thq-icon-elm34" />
+        <div class="manager-menu-thq-manager-layout-elm4">
+          <span class="manager-menu-thq-text-elm74">Menu</span>
+        </div>
+      </div>
+      <div class="manager-menu-thq-link-elm3" (click)="navigateTo('/manager-tables')" style="cursor:pointer">
+        <img src="/assets/icon3521-66m.svg" alt="Icon3521" class="manager-menu-thq-icon-elm35" />
+        <div class="manager-menu-thq-manager-layout-elm5">
+          <span class="manager-menu-thq-text-elm75">Tables</span>
+        </div>
+      </div>
+      <div class="manager-menu-thq-link-elm4" (click)="navigateTo('/manager-inventory')" style="cursor:pointer">
+        <img src="/assets/icon3521-s4ef.svg" alt="Icon3521" class="manager-menu-thq-icon-elm36" />
+        <div class="manager-menu-thq-manager-layout-elm6">
+          <span class="manager-menu-thq-text-elm76">Inventory</span>
+        </div>
+      </div>
+      <div class="manager-menu-thq-link-elm5" (click)="navigateTo('/manager-report')" style="cursor:pointer">
+        <img src="/assets/icon3521-wjgb.svg" alt="Icon3521" class="manager-menu-thq-icon-elm37" />
+        <div class="manager-menu-thq-manager-layout-elm7">
+          <span class="manager-menu-thq-text-elm77">Reports</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Modal -->
+  <div *ngIf="showModal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:1000;">
+    <div style="background:#fff;border-radius:16px;padding:32px;width:420px;max-width:90vw;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+      <h3 style="margin:0 0 20px;font-family:Inter;font-size:20px;font-weight:800;color:#2d2d2d;">
+        {{ isEditing ? 'Edit Dish' : 'Add New Dish' }}
+      </h3>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Name</label>
+        <input [(ngModel)]="editForm.name" type="text" placeholder="Dish name"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;" />
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Category</label>
+        <select [(ngModel)]="editForm.category"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;background:#fff;">
+          <option value="Appetizers">Appetizers</option>
+          <option value="Mains">Mains</option>
+          <option value="Desserts">Desserts</option>
+          <option value="Drinks">Drinks</option>
+        </select>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Price ($)</label>
+        <input [(ngModel)]="editForm.price" type="number" min="0" step="0.5"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;" />
+      </div>
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:24px;">
+        <button (click)="closeModal()"
+          style="padding:10px 24px;border:1.5px solid #e5e7eb;border-radius:12px;background:#fff;font-family:Inter;font-size:14px;font-weight:600;cursor:pointer;color:#6a7282;">
+          Cancel
+        </button>
+        <button (click)="saveItem()"
+          style="padding:10px 24px;border:none;border-radius:12px;background:#2d2d2d;color:#fff;font-family:Inter;font-size:14px;font-weight:700;cursor:pointer;">
+          {{ isEditing ? 'Update' : 'Add' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

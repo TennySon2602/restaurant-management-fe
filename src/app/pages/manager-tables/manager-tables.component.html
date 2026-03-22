@@ -1,0 +1,183 @@
+<div class="manager-tables-container1">
+  <div class="manager-tables-thq-manager-tables-elm1">
+    <div class="manager-tables-thq-manager-layout-elm1">
+      <div class="manager-tables-thq-header-elm">
+        <div class="manager-tables-thq-container-elm10">
+          <div class="manager-tables-thq-container-elm11">
+            <div class="manager-tables-thq-heading2-elm">
+              <span class="manager-tables-thq-text-elm10">
+                Manager Dashboard
+              </span>
+            </div>
+            <div class="manager-tables-thq-paragraph-elm1">
+              <span class="manager-tables-thq-text-elm11">
+                Restaurant Operations &amp; Analytics
+              </span>
+            </div>
+          </div>
+          <button class="manager-tables-thq-button-elm10" (click)="logout()">
+            <img
+              src="/assets/icon3521-nh1q.svg"
+              alt="Icon3521"
+              class="manager-tables-thq-icon-elm10"
+            />
+            <div class="manager-tables-thq-text-elm12">
+              <span class="manager-tables-thq-text-elm13">Logout</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="manager-tables-thq-manager-tables-elm2">
+        <div class="manager-tables-thq-container-elm12">
+          <div class="manager-tables-thq-container-elm13">
+            <div class="manager-tables-thq-heading3-elm">
+              <span class="manager-tables-thq-text-elm14">
+                Table Management
+              </span>
+            </div>
+            <div class="manager-tables-thq-paragraph-elm2">
+              <span class="manager-tables-thq-text-elm15">
+                Configure your restaurant floor plan
+              </span>
+            </div>
+          </div>
+          <button class="manager-tables-thq-button-elm11" (click)="openAddModal()">
+            <img
+              src="/assets/icon3521-0v7l.svg"
+              alt="Icon3521"
+              class="manager-tables-thq-icon-elm11"
+            />
+            <span class="manager-tables-thq-text-elm16">Add New Table</span>
+          </button>
+        </div>
+        <div class="manager-tables-thq-container-elm14">
+          <div class="manager-tables-thq-container-elm15">
+            <div class="manager-tables-thq-paragraph-elm3">
+              <span class="manager-tables-thq-text-elm17">Total Tables</span>
+            </div>
+            <div class="manager-tables-thq-paragraph-elm4">
+              <span class="manager-tables-thq-text-elm17">{{ totalTables }}</span>
+            </div>
+          </div>
+          <div class="manager-tables-thq-container-elm16">
+            <div class="manager-tables-thq-paragraph-elm5">
+              <span class="manager-tables-thq-text-elm18">Total Capacity</span>
+            </div>
+            <div class="manager-tables-thq-paragraph-elm6">
+              <span class="manager-tables-thq-text-elm19">{{ totalCapacity }} Seats</span>
+            </div>
+          </div>
+          <div class="manager-tables-thq-container-elm17">
+            <div class="manager-tables-thq-paragraph-elm7">
+              <span class="manager-tables-thq-text-elm20">
+                Main Hall Tables
+              </span>
+            </div>
+            <div class="manager-tables-thq-paragraph-elm8">
+              <span class="manager-tables-thq-text-elm20">{{ mainHallCount }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="manager-tables-thq-container-elm18">
+          <div class="manager-tables-thq-container-elm19" *ngFor="let table of tables">
+            <div class="manager-tables-thq-container-elm20">
+              <div class="manager-tables-thq-container-elm21">
+                <div class="manager-tables-thq-text-elm21">
+                  <span class="manager-tables-thq-text-elm22">{{ table.id }}</span>
+                </div>
+              </div>
+              <div class="manager-tables-thq-container-elm22">
+                <div class="manager-tables-thq-container-elm23">
+                  <div class="manager-tables-thq-text-elm23">
+                    <span class="manager-tables-thq-text-elm24">{{ table.seats }} Seats</span>
+                  </div>
+                </div>
+                <div class="manager-tables-thq-container-elm24">
+                  <div class="manager-tables-thq-text-elm25">
+                    <span class="manager-tables-thq-text-elm26">{{ table.location }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="manager-tables-thq-container-elm25">
+              <button class="manager-tables-thq-button-elm12" (click)="openEditModal(table)" title="Edit"
+                style="font-size:12px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:6px;background:#fff;cursor:pointer;">✏️</button>
+              <button class="manager-tables-thq-button-elm13" (click)="deleteTable(table)" title="Delete"
+                style="font-size:12px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:6px;background:#fff;cursor:pointer;">🗑️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="manager-tables-thq-manager-layout-elm2">
+      <div class="manager-tables-thq-link-elm1" (click)="navigateTo('/manager-dashboard')" style="cursor:pointer">
+        <img src="/assets/icon3524-e3ov.svg" alt="Icon3524" class="manager-tables-thq-icon-elm28" />
+        <div class="manager-tables-thq-manager-layout-elm3">
+          <span class="manager-tables-thq-text-elm69">Dashboard</span>
+        </div>
+      </div>
+      <div class="manager-tables-thq-link-elm2" (click)="navigateTo('/manager-menu')" style="cursor:pointer">
+        <img src="/assets/icon3524-s7zn.svg" alt="Icon3524" class="manager-tables-thq-icon-elm29" />
+        <div class="manager-tables-thq-manager-layout-elm4">
+          <span class="manager-tables-thq-text-elm70">Menu</span>
+        </div>
+      </div>
+      <div class="manager-tables-thq-link-elm3" (click)="navigateTo('/manager-tables')" style="cursor:pointer">
+        <img src="/assets/icon3524-dirs.svg" alt="Icon3524" class="manager-tables-thq-icon-elm30" />
+        <div class="manager-tables-thq-manager-layout-elm5">
+          <span class="manager-tables-thq-text-elm71">Tables</span>
+        </div>
+      </div>
+      <div class="manager-tables-thq-link-elm4" (click)="navigateTo('/manager-inventory')" style="cursor:pointer">
+        <img src="/assets/icon3524-5kdq.svg" alt="Icon3524" class="manager-tables-thq-icon-elm31" />
+        <div class="manager-tables-thq-manager-layout-elm6">
+          <span class="manager-tables-thq-text-elm72">Inventory</span>
+        </div>
+      </div>
+      <div class="manager-tables-thq-link-elm5" (click)="navigateTo('/manager-report')" style="cursor:pointer">
+        <img src="/assets/icon3524-c9he.svg" alt="Icon3524" class="manager-tables-thq-icon-elm32" />
+        <div class="manager-tables-thq-manager-layout-elm7">
+          <span class="manager-tables-thq-text-elm73">Reports</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Table Modal -->
+  <div *ngIf="showModal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:1000;">
+    <div style="background:#fff;border-radius:16px;padding:32px;width:400px;max-width:90vw;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+      <h3 style="margin:0 0 20px;font-family:Inter;font-size:20px;font-weight:800;color:#2d2d2d;">
+        {{ isEditing ? 'Edit Table' : 'Add New Table' }}
+      </h3>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Table ID</label>
+        <input [(ngModel)]="editForm.id" type="text" [disabled]="isEditing"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;" />
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Seats</label>
+        <input [(ngModel)]="editForm.seats" type="number" min="1"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;" />
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:12px;font-weight:700;color:#99a1af;margin-bottom:6px;font-family:Inter;">Location</label>
+        <select [(ngModel)]="editForm.location"
+          style="width:100%;padding:12px 16px;border:1.5px solid #e5e7eb;border-radius:12px;font-family:Inter;font-size:14px;box-sizing:border-box;background:#fff;">
+          <option value="Main Hall">Main Hall</option>
+          <option value="Window">Window</option>
+          <option value="Bar">Bar</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:24px;">
+        <button (click)="closeModal()"
+          style="padding:10px 24px;border:1.5px solid #e5e7eb;border-radius:12px;background:#fff;font-family:Inter;font-size:14px;font-weight:600;cursor:pointer;color:#6a7282;">
+          Cancel
+        </button>
+        <button (click)="saveTable()"
+          style="padding:10px 24px;border:none;border-radius:12px;background:#2d2d2d;color:#fff;font-family:Inter;font-size:14px;font-weight:700;cursor:pointer;">
+          {{ isEditing ? 'Update' : 'Add' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
