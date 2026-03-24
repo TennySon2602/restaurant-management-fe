@@ -1,0 +1,70 @@
+<div class="login-container">
+  <div class="login-card fade-in">
+    <div class="login-header">
+      <h1>🍜 Restaurant Management</h1>
+      <p>Vietnamese Cuisine Excellence</p>
+    </div>
+
+    <!-- Role Selection -->
+    <div class="role-selection">
+      <button
+        *ngFor="let role of roles"
+        [class.active]="selectedRole === role.value"
+        (click)="selectRole(role.value)"
+        class="role-button">
+        <span class="role-icon">{{ role.icon }}</span>
+        <span class="role-label">{{ role.label }}</span>
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="login()" class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Enter username"
+          class="form-input"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Enter password"
+          class="form-input"
+          required
+        />
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <button type="submit" class="btn-primary login-button">
+        Login as {{ selectedRole }}
+      </button>
+
+      <div class="credentials-hint">
+        💡 {{ getCredentialsHint() }}
+      </div>
+    </form>
+
+    <div class="login-footer">
+      <p>Demo Application - Vietnamese Restaurant Management</p>
+      <p class="color-palette">
+        <span class="color-box primary"></span>
+        <span class="color-box secondary"></span>
+        <span class="color-box neutral"></span>
+      </p>
+    </div>
+  </div>
+</div>

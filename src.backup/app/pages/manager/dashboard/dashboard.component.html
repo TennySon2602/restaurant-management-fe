@@ -1,0 +1,76 @@
+<div class="dashboard fade-in">
+  <header class="dashboard-header">
+    <h1>Analytics Dashboard</h1>
+    <p>Real-time restaurant performance metrics</p>
+  </header>
+
+  <!-- Key Metrics -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-icon">💰</div>
+      <div class="metric-info">
+        <h3>Total Revenue</h3>
+        <p class="metric-value">{{ formatCurrency(analytics.totalRevenue) }}</p>
+        <span class="metric-label">Today's earnings</span>
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">📋</div>
+      <div class="metric-info">
+        <h3>Orders Today</h3>
+        <p class="metric-value">{{ analytics.ordersToday }}</p>
+        <span class="metric-label">Total orders</span>
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon">📊</div>
+      <div class="metric-info">
+        <h3>Average Order</h3>
+        <p class="metric-value">{{ formatCurrency(analytics.averageOrderValue) }}</p>
+        <span class="metric-label">Per transaction</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-grid">
+    <!-- Popular Items -->
+    <div class="chart-card">
+      <h3>Popular Menu Items</h3>
+      <div class="popular-items">
+        <div *ngFor="let item of analytics.popularItems; let i = index" class="popular-item">
+          <span class="item-rank">{{ i + 1 }}</span>
+          <span class="item-name">{{ item.item }}</span>
+          <span class="item-orders">{{ item.orders }} orders</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Revenue by Day -->
+    <div class="chart-card">
+      <h3>Revenue This Week</h3>
+      <div class="revenue-chart">
+        <div *ngFor="let day of analytics.revenueByDay" class="revenue-bar">
+          <div class="bar" [style.height.%]="(day.revenue / 30000) * 100"></div>
+          <span class="bar-label">{{ day.date }}</span>
+          <span class="bar-value">{{ formatCurrency(day.revenue) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hourly Activity -->
+  <div class="chart-card full-width">
+    <h3>Orders by Hour</h3>
+    <div class="hourly-chart">
+      <div *ngFor="let hour of analytics.ordersByHour" class="hour-bar">
+        <div class="bar-container">
+          <div class="bar" [style.height.%]="(hour.orders / 30) * 100"></div>
+        </div>
+        <span class="hour-label">{{ hour.hour }}:00</span>
+      </div>
+    </div>
+  </div>
+</div>

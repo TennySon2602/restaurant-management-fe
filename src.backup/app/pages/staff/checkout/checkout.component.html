@@ -1,0 +1,291 @@
+<div class="checkout-container" *ngIf="order && !showInvoice">
+  <header class="checkout-header">
+    <button (click)="backToStaff()" class="back-button">← Quay lại</button>
+    <h1>💳 Thanh Toán</h1>
+    <div class="table-info">Bàn {{ tableNumber }}</div>
+  </header>
+
+  <div class="checkout-layout">
+    <!-- Left: Order Summary -->
+    <div class="order-summary card">
+      <h2>Chi Tiết Đơn Hàng</h2>
+      
+      <div class="order-items">
+        <div *ngFor="let item of order.items" class="order-item">
+          <div class="item-info">
+            <span class="item-name">{{ item.menuItem.name }}</span>
+            <span class="item-qty">x{{ item.quantity }}</span>
+          </div>
+          <span class="item-price">{{ formatCurrency(item.menuItem.price * item.quantity) }}</span>
+        </div>
+      </div>
+
+      <div class="order-totals">
+        <div class="total-row">
+          <span>Tạm tính:</span>
+          <span>{{ formatCurrency(subtotal) }}</span>
+        </div>
+        <div class="total-row">
+          <span>VAT (10%):</span>
+          <span>{{ formatCurrency(tax) }}</span>
+        </div>
+        <div class="total-row discount-row" *ngIf="discount > 0">
+          <span>Giảm giá:</span>
+          <span class="discount-amount">-{{ formatCurrency(discount) }}</span>
+        </div>
+        <div class="total-row final-total">
+          <span>Tổng cộng:</span>
+          <span class="total-amount">{{ formatCurrency(totalAfterDiscount) }}</span>
+        </div>
+      </div>
+
+      <!-- Discount Code -->
+      <div class="discount-section">
+        <h3>Mã Giảm Giá</h3>
+        <div class="discount-input-group">
+          <input 
+            type="text" 
+            [(ngModel)]="discountCode"
+            placeholder="Nhập mã giảm giá"
+            class="discount-input"
+          />
+          <button (click)="applyDiscount()" class="btn-secondary">Áp dụng</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Payment -->
+    <div class="payment-section">
+      <div class="card">
+        <h2>Phương Thức Thanh Toán</h2>
+
+        <!-- Payment Method Selection -->
+        <div class="payment-methods">
+          <button 
+            (click)="paymentMethod = 'cash'"
+            [class.active]="paymentMethod === 'cash'"
+            class="payment-method-btn">
+            <span class="method-icon">💵</span>
+            <span>Tiền mặt</span>
+          </button>
+          <button 
+            (click)="paymentMethod = 'card'"
+            [class.active]="paymentMethod === 'card'"
+            class="payment-method-btn">
+            <span class="method-icon">💳</span>
+            <span>Thẻ</span>
+          </button>
+          <button 
+            (click)="paymentMethod = 'transfer'"
+            [class.active]="paymentMethod === 'transfer'"
+            class="payment-method-btn">
+            <span class="method-icon">🏦</span>
+            <span>Chuyển khoản</span>
+          </button>
+        </div>
+
+        <!-- Cash Payment -->
+        <div *ngIf="paymentMethod === 'cash'" class="payment-form">
+          <div class="form-group">
+            <label>Số tiền khách đưa:</label>
+            <input 
+              type="number" 
+              [(ngModel)]="cashReceived"
+              placeholder="0"
+              class="form-input amount-input"
+            />
+          </div>
+          <div class="change-display" *ngIf="cashReceived > 0">
+            <span>Tiền thừa:</span>
+            <span class="change-amount">{{ formatCurrency(changeAmount) }}</span>
+          </div>
+        </div>
+
+        <!-- Card Payment -->
+        <div *ngIf="paymentMethod === 'card'" class="payment-form">
+          <div class="form-group">
+            <label>Số tiền thanh toán:</label>
+            <input 
+              type="number" 
+              [(ngModel)]="cardAmount"
+              [placeholder]="formatCurrency(remainingAmount)"
+              class="form-input amount-input"
+            />
+          </div>
+          <div class="form-group">
+            <label>Mã giao dịch:</label>
+            <input 
+              type="text" 
+              [(ngModel)]="cardReference"
+              placeholder="Nhập mã giao dịch từ máy POS"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <!-- Transfer Payment -->
+        <div *ngIf="paymentMethod === 'transfer'" class="payment-form">
+          <div class="form-group">
+            <label>Số tiền chuyển khoản:</label>
+            <input 
+              type="number" 
+              [(ngModel)]="transferAmount"
+              [placeholder]="formatCurrency(remainingAmount)"
+              class="form-input amount-input"
+            />
+          </div>
+          <div class="form-group">
+            <label>Mã giao dịch:</label>
+            <input 
+              type="text" 
+              [(ngModel)]="transferReference"
+              placeholder="Nhập mã giao dịch ngân hàng"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <button (click)="addPayment()" class="btn-secondary add-payment-btn">
+          + Thêm Thanh Toán
+        </button>
+      </div>
+
+      <!-- Payment Summary -->
+      <div class="card payment-summary">
+        <h3>Tổng Kết Thanh Toán</h3>
+        
+        <div class="payment-list">
+          <div *ngIf="payments.length === 0" class="empty-payments">
+            Chưa có thanh toán nào
+          </div>
+
+          <div *ngFor="let payment of payments" class="payment-item">
+            <div class="payment-info">
+              <span class="payment-icon">{{ getPaymentMethodIcon(payment.method) }}</span>
+              <div class="payment-details">
+                <div class="payment-method">{{ getPaymentMethodText(payment.method) }}</div>
+                <div class="payment-ref" *ngIf="payment.reference">
+                  Mã: {{ payment.reference }}
+                </div>
+              </div>
+            </div>
+            <div class="payment-right">
+              <span class="payment-amount">{{ formatCurrency(payment.amount) }}</span>
+              <button (click)="removePayment(payment)" class="remove-btn">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-totals">
+          <div class="payment-total-row">
+            <span>Tổng hóa đơn:</span>
+            <span class="amount">{{ formatCurrency(totalAfterDiscount) }}</span>
+          </div>
+          <div class="payment-total-row paid">
+            <span>Đã thanh toán:</span>
+            <span class="amount paid-amount">
+              {{ formatCurrency(totalAfterDiscount - remainingAmount) }}
+            </span>
+          </div>
+          <div class="payment-total-row remaining" *ngIf="remainingAmount > 0">
+            <span>Còn lại:</span>
+            <span class="amount remaining-amount">{{ formatCurrency(remainingAmount) }}</span>
+          </div>
+          <div class="payment-total-row complete" *ngIf="remainingAmount === 0 && payments.length > 0">
+            <span>✓ Đã thanh toán đủ</span>
+          </div>
+        </div>
+
+        <button 
+          (click)="completeCheckout()"
+          [disabled]="remainingAmount > 0"
+          class="btn-primary complete-btn">
+          Hoàn Tất Thanh Toán
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Invoice -->
+<div *ngIf="showInvoice && generatedInvoice" class="invoice-container">
+  <div class="invoice card">
+    <div class="invoice-header">
+      <h1>🍜 NHÀ HÀNG VIỆT NAM</h1>
+      <p>HÓA ĐƠN THANH TOÁN</p>
+    </div>
+
+    <div class="invoice-info">
+      <div class="info-row">
+        <span>Số hóa đơn:</span>
+        <span>{{ generatedInvoice.id }}</span>
+      </div>
+      <div class="info-row">
+        <span>Bàn:</span>
+        <span>{{ generatedInvoice.tableNumber }}</span>
+      </div>
+      <div class="info-row">
+        <span>Ngày giờ:</span>
+        <span>{{ generatedInvoice.paidAt | date:'dd/MM/yyyy HH:mm' }}</span>
+      </div>
+      <div class="info-row">
+        <span>Thu ngân:</span>
+        <span>{{ generatedInvoice.staffName }}</span>
+      </div>
+    </div>
+
+    <div class="invoice-items">
+      <div class="invoice-item header">
+        <span>Món</span>
+        <span>SL</span>
+        <span>Đơn giá</span>
+        <span>Thành tiền</span>
+      </div>
+      <div *ngFor="let item of generatedInvoice.items" class="invoice-item">
+        <span>{{ item.menuItem.name }}</span>
+        <span>{{ item.quantity }}</span>
+        <span>{{ formatCurrency(item.menuItem.price) }}</span>
+        <span>{{ formatCurrency(item.menuItem.price * item.quantity) }}</span>
+      </div>
+    </div>
+
+    <div class="invoice-totals">
+      <div class="invoice-total-row">
+        <span>Tạm tính:</span>
+        <span>{{ formatCurrency(generatedInvoice.subtotal) }}</span>
+      </div>
+      <div class="invoice-total-row">
+        <span>VAT (10%):</span>
+        <span>{{ formatCurrency(generatedInvoice.tax) }}</span>
+      </div>
+      <div class="invoice-total-row" *ngIf="generatedInvoice.discount > 0">
+        <span>Giảm giá:</span>
+        <span>-{{ formatCurrency(generatedInvoice.discount) }}</span>
+      </div>
+      <div class="invoice-total-row final">
+        <span>TỔNG CỘNG:</span>
+        <span>{{ formatCurrency(generatedInvoice.total) }}</span>
+      </div>
+    </div>
+
+    <div class="invoice-payment">
+      <div class="payment-method-info">
+        <strong>Hình thức thanh toán:</strong> {{ generatedInvoice.paymentMethod }}
+      </div>
+      <div *ngFor="let payment of generatedInvoice.paymentDetails" class="payment-detail">
+        {{ getPaymentMethodText(payment.method) }}: {{ formatCurrency(payment.amount) }}
+        <span *ngIf="payment.reference" class="ref"> ({{ payment.reference }})</span>
+      </div>
+    </div>
+
+    <div class="invoice-footer">
+      <p>Cảm ơn quý khách!</p>
+      <p>Hẹn gặp lại!</p>
+    </div>
+
+    <div class="invoice-actions">
+      <button (click)="printInvoice()" class="btn-primary">🖨️ In Hóa Đơn</button>
+      <button (click)="backToStaff()" class="btn-secondary">Quay Lại POS</button>
+    </div>
+  </div>
+</div>

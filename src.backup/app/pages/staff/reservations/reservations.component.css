@@ -1,0 +1,413 @@
+.reservations-container {
+  max-width: 100%;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-x: hidden;
+}
+
+.page-header {
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.page-header h1 {
+  margin: 0 0 clamp(0.25rem, 1vw, 0.5rem) 0;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.page-header p {
+  color: #666;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.reservations-section {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.reservations-section h2 {
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
+}
+
+.empty-state {
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem);
+  background: white;
+  border-radius: var(--radius-lg);
+  color: #999;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Responsive grid */
+.reservations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+@media (min-width: 640px) {
+  .reservations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .reservations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+.reservation-card {
+  position: relative;
+  border-left: 4px solid #e5e5e5;
+  transition: all 0.2s;
+  break-inside: avoid;
+}
+
+.reservation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-soon {
+  border-left-color: var(--color-primary);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.reservation-time {
+  display: flex;
+  gap: clamp(0.375rem, 1vw, 0.5rem);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.time-badge {
+  background: var(--color-secondary);
+  color: white;
+  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+.soon-badge {
+  background: var(--color-primary);
+  color: white;
+  padding: clamp(0.25rem, 0.5vw, 0.375rem) clamp(0.5rem, 1.5vw, 0.75rem);
+  border-radius: 1rem;
+  font-size: clamp(0.625rem, 1.5vw, 0.75rem);
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.status-badge {
+  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.625rem, 1.5vw, 0.875rem);
+  border-radius: 1rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-confirmed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-seated {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-completed {
+  background: #e5e5e5;
+  color: #666;
+}
+
+.badge-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.customer-info {
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+}
+
+.customer-info h3 {
+  margin: 0 0 clamp(0.25rem, 0.5vw, 0.375rem) 0;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.phone {
+  color: #666;
+  margin: 0;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+}
+
+.guest-details {
+  background: var(--color-neutral);
+  padding: clamp(0.75rem, 2vw, 1rem);
+  border-radius: var(--radius-md);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+}
+
+.guest-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  padding-bottom: clamp(0.75rem, 2vw, 1rem);
+  border-bottom: 2px solid #ddd;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  padding: clamp(0.375rem, 1vw, 0.5rem);
+  background: white;
+  border-radius: var(--radius-md);
+}
+
+.guest-icon {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  width: clamp(32px, 10vw, 40px);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.guest-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-item .label {
+  color: #666;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.detail-item .value {
+  font-weight: 900;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--color-secondary);
+}
+
+.totals-section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.375rem, 1vw, 0.5rem);
+}
+
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.375rem, 1vw, 0.5rem);
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.total-item.seats {
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: var(--radius-md);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+.total-label {
+  color: #666;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 700;
+}
+
+.total-value {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.total-value.seats-value {
+  color: #10b981;
+  font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+}
+
+.table-info {
+  display: flex;
+  gap: clamp(0.375rem, 1vw, 0.5rem);
+  align-items: center;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.table-info .label {
+  color: #666;
+  font-weight: 700;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.table-info .tables {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+.pre-order-badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 0.75rem);
+  border-radius: var(--radius-md);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-weight: 700;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  display: inline-block;
+}
+
+.notes {
+  background: #fef3c7;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  border-radius: var(--radius-md);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  line-height: 1.4;
+}
+
+.arrival-time {
+  color: #10b981;
+  font-weight: 700;
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.reservation-actions {
+  display: flex;
+  gap: clamp(0.375rem, 1vw, 0.5rem);
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  flex: 1;
+  min-width: fit-content;
+}
+
+/* Upcoming Reservations - responsive */
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+.upcoming-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  align-items: start;
+}
+
+@media (min-width: 640px) {
+  .upcoming-item {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+}
+
+.upcoming-date {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.25rem, 0.5vw, 0.375rem);
+}
+
+.date-badge {
+  background: var(--color-secondary);
+  color: white;
+  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 0.75rem);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.upcoming-info h4 {
+  margin: 0 0 clamp(0.25rem, 0.5vw, 0.5rem) 0;
+  font-size: clamp(1rem, 3vw, 1.125rem);
+}
+
+.upcoming-info p {
+  margin: 0 0 clamp(0.25rem, 0.5vw, 0.5rem) 0;
+  color: #666;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+}
+
+.upcoming-actions {
+  display: flex;
+  gap: clamp(0.375rem, 1vw, 0.5rem);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+  .upcoming-actions {
+    width: 100%;
+  }
+  
+  .upcoming-actions button {
+    flex: 1;
+  }
+}
+
+/* Mobile landscape optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+  .reservations-container {
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .reservation-card {
+    padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .reservation-actions {
+    flex-direction: column;
+  }
+  
+  .btn-sm {
+    width: 100%;
+  }
+}
+
+/* Print optimization */
+@media print {
+  .reservation-actions,
+  .upcoming-actions {
+    display: none;
+  }
+  
+  .reservation-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

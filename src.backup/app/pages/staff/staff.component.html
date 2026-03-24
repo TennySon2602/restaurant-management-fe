@@ -1,0 +1,184 @@
+<div class="staff-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1>⚡ Staff POS System</h1>
+      <div class="header-actions">
+        <button (click)="viewReservations()" class="btn-primary">
+          📅 Đặt Bàn
+        </button>
+        <button (click)="mergeTables()" class="btn-secondary">
+          Merge Tables
+        </button>
+        <button (click)="logout()" class="btn-secondary">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="pos-layout">
+    <!-- Left: Table Selection -->
+    <div class="tables-panel">
+      <h2>Select Table</h2>
+      <div class="tables-grid">
+        <button
+          *ngFor="let table of tables"
+          [class.selected]="selectedTable?.id === table.id"
+          [class.occupied]="table.status === 'occupied'"
+          [class.reserved]="table.status === 'reserved'"
+          (click)="selectTable(table)"
+          class="table-card">
+          <span class="table-number">{{ table.number }}</span>
+          <span class="table-status">{{ table.status }}</span>
+          <span class="table-capacity">{{ table.capacity }} seats</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center: Menu -->
+    <div class="menu-panel" *ngIf="selectedTable && !showTableDetail">
+      <div class="menu-header">
+        <h2>Menu</h2>
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          placeholder="Search menu..."
+          class="search-input"
+        />
+      </div>
+
+      <!-- Categories -->
+      <div class="categories">
+        <button
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category"
+          (click)="selectedCategory = category"
+          class="category-btn">
+          {{ category }}
+        </button>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="menu-items">
+        <button
+          *ngFor="let item of getFilteredMenuItems()"
+          (click)="addToOrder(item)"
+          [disabled]="!item.available"
+          class="menu-item">
+          <div class="item-info">
+            <h4>{{ item.name }}</h4>
+            <p class="item-category">{{ item.category }}</p>
+            <p class="item-price">{{ formatPrice(item.price) }}</p>
+          </div>
+          <div class="item-action">+</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Table Detail View -->
+    <div class="table-detail-panel" *ngIf="selectedTable && showTableDetail">
+      <div class="detail-header">
+        <h2>Bàn {{ selectedTable.number }}</h2>
+        <button (click)="showTableDetail = false" class="back-btn">← Quay lại menu</button>
+      </div>
+
+      <div class="order-summary-detail">
+        <h3>Order hiện tại</h3>
+        <div class="order-items-list">
+          <div *ngIf="currentOrder.length === 0" class="empty-order">
+            Chưa có món nào
+          </div>
+          
+          <div *ngFor="let item of currentOrder" class="order-item-detail">
+            <div class="item-name">{{ item.menuItem.name }}</div>
+            <div class="item-controls">
+              <button (click)="updateQuantity(item, -1)" class="qty-btn">-</button>
+              <span class="qty">{{ item.quantity }}</span>
+              <button (click)="updateQuantity(item, 1)" class="qty-btn">+</button>
+            </div>
+            <div class="item-total">{{ formatPrice(item.menuItem.price * item.quantity) }}</div>
+          </div>
+        </div>
+
+        <div class="detail-totals">
+          <div class="total-row">
+            <span>Tạm tính:</span>
+            <span>{{ formatPrice(getOrderTotal()) }}</span>
+          </div>
+          <div class="total-row">
+            <span>VAT (10%):</span>
+            <span>{{ formatPrice(getOrderTotal() * 0.1) }}</span>
+          </div>
+          <div class="total-row final">
+            <span>Tổng cộng:</span>
+            <span>{{ formatPrice(getOrderTotal() * 1.1) }}</span>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button (click)="showTableDetail = false" class="btn-secondary">
+            Thêm món
+          </button>
+          <button (click)="submitOrder()" [disabled]="currentOrder.length === 0" class="btn-secondary">
+            Gửi bếp
+          </button>
+          <button (click)="proceedToCheckout()" [disabled]="currentOrder.length === 0" class="btn-primary">
+            Thanh toán
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Current Order -->
+    <div class="order-panel" *ngIf="selectedTable && !showTableDetail">
+      <h2>Table {{ selectedTable.number }}</h2>
+      
+      <div class="order-items">
+        <div *ngIf="currentOrder.length === 0" class="empty-order">
+          No items in order
+        </div>
+
+        <div *ngFor="let item of currentOrder" class="order-item">
+          <div class="order-item-info">
+            <h4>{{ item.menuItem.name }}</h4>
+            <p class="order-item-price">{{ formatPrice(item.menuItem.price) }}</p>
+          </div>
+          
+          <div class="quantity-controls">
+            <button (click)="updateQuantity(item, -1)" class="qty-btn">-</button>
+            <span class="qty-value">{{ item.quantity }}</span>
+            <button (click)="updateQuantity(item, 1)" class="qty-btn">+</button>
+          </div>
+
+          <div class="order-item-total">
+            {{ formatPrice(item.menuItem.price * item.quantity) }}
+          </div>
+
+          <button (click)="removeFromOrder(item)" class="remove-btn">✕</button>
+        </div>
+      </div>
+
+      <div class="order-footer">
+        <div class="order-total">
+          <span>Total:</span>
+          <span class="total-amount">{{ formatPrice(getOrderTotal()) }}</span>
+        </div>
+        
+        <button
+          (click)="showTableDetail = true"
+          [disabled]="currentOrder.length === 0"
+          class="btn-primary submit-order">
+          Xem chi tiết →
+        </button>
+      </div>
+    </div>
+
+    <!-- Placeholder when no table selected -->
+    <div class="no-table-selected" *ngIf="!selectedTable">
+      <div class="placeholder-content">
+        <div class="placeholder-icon">🍽️</div>
+        <h3>Select a table to start</h3>
+        <p>Choose a table from the left panel to begin taking orders</p>
+      </div>
+    </div>
+  </div>
+</div>

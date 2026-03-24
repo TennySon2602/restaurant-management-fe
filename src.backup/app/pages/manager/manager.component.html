@@ -1,0 +1,58 @@
+<div class="manager-layout">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>👨‍💼 Manager Portal</h2>
+      <p>Restaurant Management</p>
+    </div>
+
+    <nav class="nav-menu">
+      <a routerLink="/manager" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+        <span class="nav-icon">📊</span>
+        <span>Dashboard</span>
+      </a>
+      
+      <a routerLink="/manager/menu" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">🍜</span>
+        <span>Menu</span>
+      </a>
+      
+      <a routerLink="/manager/tables" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">🪑</span>
+        <span>Tables</span>
+      </a>
+      
+      <a routerLink="/manager/inventory" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">📦</span>
+        <span>Inventory</span>
+      </a>
+      
+      <a routerLink="/manager/discounts" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">🎫</span>
+        <span>Discounts</span>
+      </a>
+      
+      <a routerLink="/manager/employees" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">👥</span>
+        <span>Employees</span>
+      </a>
+      
+      <a routerLink="/manager/reports" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">📈</span>
+        <span>Reports</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button (click)="logout()" class="logout-button">
+        <span>🚪</span>
+        <span>Logout</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
